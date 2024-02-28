@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="assets/css/stylepv1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -38,8 +38,8 @@
             </div>
             <div class="group">
                 <div class="Postcards">
-                    <a  class="a1"href="index.html">HOME /</a>
-                    <a class="a1" href="SHOP.html">Shop </a>
+                    <a  class="a1"href="index.php">HOME /</a>
+                    <a class="a1" href="SHOP.php">Shop </a>
                     <p style="color: rgb(30, 148, 30); margin-left: 50px;font-size: 50px;">Posters</p>
                     <div class="paragraph">
                         <p style="font-size: 12px; margin-left: 50px; color: gray;">Shawing all 12 result</p>
@@ -56,20 +56,20 @@
                     </div>
                     <div class="Postercard3">
                         <div>
-                            <a href="posterv1.html"><img src="PosteV2.jpg" alt=""></a> 
+                            <a href="posterv1.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Poster v1</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="posterv2.html"><img src="PosteV1.jpg" alt=""></a> 
+                            <a href="posterv2.php"><img src="assets/img/PosteV1.jpg" alt=""></a> 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v2</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
                         </div>
                         <div>
-                            <a href="posterv3.html"><img src="PosteV3.jpg" alt=""></a> 
+                            <a href="posterv3.php"><img src="assets/img/PosteV3.jpg" alt=""></a> 
                             <p style="color: gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v3</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
@@ -77,20 +77,20 @@
                     </div>
                     <div class="Postercard4">
                         <div>
-                            <a href="posterv4.html"><img src="img/Banner.jpg" alt=""></a> 
+                            <a href="posterv4.php"><img src="assets/img/Banner.jpg" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Poster v4</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="posterv5.html"><img src="PosteV2.jpg" alt=""></a> 
+                            <a href="posterv5.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v5</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
                         </div>
                         <div>
-                            <a href="posterv6.html"><img src="img/imag7.png" alt=""></a> 
+                            <a href="posterv6.php"><img src="assets/img/imag7.png" alt=""></a> 
                             <p style="color: gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v6</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>

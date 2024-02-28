@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="assets/css/stylepv1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -38,8 +38,8 @@
             </div>
             <div class="group">
                 <div class="Postcards">
-                    <a  class="a1"href="index.html">HOME /</a>
-                    <a class="a1" href="SHOP.html">Shop </a>
+                    <a  class="a1"href="index.php">HOME /</a>
+                    <a class="a1" href="SHOP.php">Shop </a>
                     <p style="color: rgb(30, 148, 30); margin-left: 50px;font-size: 50px;">Postcards</p>
                     <div class="paragraph">
                         <p style="font-size: 12px; margin-left: 50px; color: gray;">Shawing all 12 result</p>
@@ -56,21 +56,21 @@
                     </div>
                     <div class="Postercard1">
                         <div>
-                            <a href="Postcardv1.html"><img src="img/imag.png" alt=""></a> 
+                            <a href="Postcardv1.php"><img src="assets/img/imag.png" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Postcards</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Postcard v1</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="Postcardv2.html"><img src="img/img3.png" alt=""></a> 
+                            <a href="Postcardv2.php"><img src="assets/img/img3.png" alt=""></a> 
 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Postcards</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Postcard v2</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
                         </div>
                         <div>
-                            <a href="Postcardv3.html"><img src="img/imag3.png" alt=""></a> 
+                            <a href="Postcardv3.php"><img src="assets/img/imag3.png" alt=""></a> 
                             <p style="color: gray; font-size: small;margin-left:20px ;">Postcards</p>
                             <a href=""style="margin-left:20px ; font-size: 14px;">Postcard v3</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
@@ -78,20 +78,20 @@
                     </div>
                     <div class="Postercard2">
                         <div>
-                            <a href="Postcardv4.html"><img src="img/imag5.png" alt=""></a> 
+                            <a href="Postcardv4.php"><img src="assets/img/imag5.png" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Postcards</p>
                             <a href="" style="margin-left:20px ; font-size: 14px;">Postcard v4</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="Postcardv5.html"><img src="img/imag4.png" alt=""></a> 
+                            <a href="Postcardv5.php"><img src="assets/img/imag4.png" alt=""></a> 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Postcards</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Postcard v5</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
                         </div>
                         <div>
-                            <a href="Postcardv6.html"><img src="img/image6.png" alt=""></a> 
+                            <a href="Postcardv6.php"><img src="assets/img/image6.png" alt=""></a> 
                             <p style="color: gray; font-size: small;margin-left:20px ;">Postcard</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Postcard v6</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>

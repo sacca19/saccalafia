@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylepv1.css">
+    <link rel="stylesheet" href="assets/css/stylepv1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <title>Document</title>
@@ -14,17 +14,17 @@
     ?>
         <section class="section1">
             <div class="contenu1">
-            <img class="image" src="PosteV1.jpg" alt="">
+            <img class="image" src="assets/img/PosteV1.jpg" alt="">
             <div>
                 <div class="menu1">
-                <a  class="a1"href="index.html">HOME /</a>
-                <a class="a1" href="Posters.html">Posters /</a>
+                <a  class="a1"href="index.php">HOME /</a>
+                <a class="a1" href="Posters.php">Posters /</a>
                 <div style="margin-top: -15px;">
                     <p>Poster v5</p>
                 </div>
                 </div>
                 
-                <a class="a2"href="Posters.html">Posters</a>
+                <a class="a2"href="Posters.php">Posters</a>
                 <p style= "font-size: xx-large; margin-left:20px ;">Posters V1</p>
                 <p style="margin-left:20px ;font-size: 25px;">$17.99</p>
                 <p style="color:rgb(60, 57, 57);">Sending a travel postcard to a loved one is truly a thoughtful gesture<br> that can bring joy and inspiration. Inspiration can come in the form of<br> taking a break from the normal routine, while being reminded of the<br> more adventurous and exotic destinations around the world.</p>
@@ -74,8 +74,8 @@
         </section>
         <section class="section2">
             <div class=" lien1">
-                <a class="a3" href="posterv5.html">Description</a>
-                <a class="a3" href="Reviews.html">Reviews(0)</a>
+                <a class="a3" href="posterv5.php">Description</a>
+                <a class="a3" href="Reviews.php">Reviews(0)</a>
             </div>
             <div class="lot1">
                 <p>Paper Type: Matte</p>
@@ -102,20 +102,20 @@
             <h1 style="margin-left: 18px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
             <div class="Postercard1">
                 <div>
-                    <a href="posterv1.html"><img src="img/img" alt=""></a>                    
+                    <a href="posterv1.php"><img src="assets/img/img" alt=""></a>                    
                     <p style="color: gray; font-size:large; margin-left:20px ;">Poster</p>
                     <a href="" style="margin-left:20px ; color: black;font-size: 15px;">Poster v4</a>
                     <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 16px;">$23.99</p>
                 
                 </div>
                 <div>
-                    <a href="posterv1.html"><img src="img/img3.png" alt=""></a>                    
+                    <a href="posterv1.php"><img src="assets/img/img3.png" alt=""></a>                    
                     <p style="color:gray; font-size:large;margin-left:20px ;">Poster</p>
                     <a href=""style="margin-left:20px ; color: black;font-size: 15px;">Poster v6</a>
                     <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 16px;">$17.99</p>
                 </div>
                 <div>
-                    <a href="posterv1.html"><img src="img/imag7.png" alt=""></a>                     
+                    <a href="posterv1.php"><img src="assets/img/imag7.png" alt=""></a>                     
                     <p style="color: gray; font-size:large;margin-left:20px ;">Poster</p>
                     <a href=""style="margin-left:20px ;color: black; font-size: 15px;">Poster v3</a>
                     <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 16px;">$14.99</p>

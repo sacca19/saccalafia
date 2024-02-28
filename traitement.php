@@ -1,38 +1,56 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-try{
-    $bdd = new PDO("mysql:host=$servername;dbname=connexion",$username,$password);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    //echo "Conexion réussie";
-}
-catch(PDOException $e){
-echo "Erreur :".$e->getMessage();
-}
+<?php 
 
-if(isset($_POST) AND !empty($_POST['nom'])){
-    $nom = htmlspecialchars($_POST['nom']);
+// CONNEXION A LA BASE DE DONNEES
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+  try {
+    $bdd = new PDO ("mysql:host=$servername;dbname=connexion",$username,$password);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  } catch (Exception $e) {
+    echo 'ERREUR :'.$e->getMessage();
+  }
+
+
+// tu peux laisser le controle de isset($_post['ok']) ou bien
+// tu peux enléver
+
+if (isset($_POST['ok'])) {
+  // ICI ON RECUPERE LES VALEURS DES CHAMPS DU FORMULAIRE
+    $nom = htmlentities($_POST['nom']);
     $prenom = $_POST['prenom'];
     $pseudo = $_POST['pseudo'];
     $phonenumber = $_POST['phonenumber'];
-    $e_mail = $_POST['e_mail'];
+    $email = $_POST['e_mail'];
     $pass = $_POST['pass'];
 
-    $data = $bdd->prepare('SELECT count(*) as count FROM users WHERE email = ?');
-    $data->execute(array($e_mail));
-    $dataUser = $data->fetch();
+  if(isset($nom, $prenom, $pseudo, $phonenumber, $email, $pass) AND !empty($_POST['nom'])){
 
-    if($dataUser['count'] > 0){
-    $requete = $bdd->prepare('INSERT INTO users (nom, prenom, pseudo, email,phonenumber, password) VALUES (?,?,?,?,?,?)');
-    $requete->execute(array($nom,$prenom,$pseudo,$e_mail,$phonenumber,$pass));
-    echo 'Success';
-    }else{
-        echo 'Echec d\'ajout';
+    // VERIFIONS SI L'email que la personne à renseigner existe déjà dans la base de données
+
+    $reqData = $bdd->prepare('SELECT count(*) as count FROM users WHERE email = ?');
+    $reqData->execute(array($email));
+    $resultat = $reqData->fetch();
+
+    if ($resultat['count'] > 0) {
+        echo  'E-mail existe déjà !'; 
+      }else{
+        // SI l'EMAIL n'exite pas dans la base de données on fait un contrôle 
+        // pour savoir si le mot de passe fait 8 caractères
+
+        if (strlen($pass) >= 8) {
+                // si c'est bon, on insert les informations du formulaire dans la base de données
+                $req = $bdd->prepare("INSERT INTO users(nom, prenom, pseudo, email, phonenumber, password) VALUES (?,?,?,?,?,?)");
+                $req->execute(array($nom, $prenom,$pseudo,$email,$phonenumber,$pass));
+                
+                echo 'Inscription réussie';
+          }else{
+          echo 'Mot de passe au moins 8 caractères !';
+        }
+      }
+    }else {
+     echo 'Veillez remplir tous les champs !';
     }
-   
-
-}else{
-    echo 'Remplissez tout les champs';
 }
+
 ?>

@@ -1,11 +1,11 @@
 <header>
         <nav class="navigation">
-            <a  class="logo" href="index.html"><strong>EARTH STORE</strong></a>
+            <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
                 <div class="menu">
-                <a href="index.html">HOME</a>
-                <a href="ABOUT.html">ABOUT</a>
-                <a href="SHOP.html">SHOP</a>
-                <a href="Contact.html">CONTACT</a>
+                <a href="index.php">HOME</a>
+                <a href="ABOUT.php">ABOUT</a>
+                <a href="SHOP.php">SHOP</a>
+                <a href="Contact.php">CONTACT</a>
                 <a href="#">
                     <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
                 </a>

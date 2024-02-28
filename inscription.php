@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="assets/css/Style.css">
     <title>Inscription</title>
 
 </head>
@@ -30,8 +30,8 @@
         <label for="e_mail">e_mail</label>
         <input type="text" id="e_mail" name="e_mail" >
         <br>
-        <label for="pass">pass</label>
-        <input type="text" id="pass" name="pass">
+        <label for="pass">password</label>
+        <input type="text" id="pass" name="password">
         <br>
         <div class="btn">
             <input style="background-color: green; color:white;border-radius:9px " type="submit" value="M'inscrire" name="ok">
