@@ -1,0 +1,137 @@
+body{
+    font-family:'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0px;
+  
+}
+.navigation{
+   align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    padding: 10px;
+    height: 150px;
+    display: flex;
+}
+header{
+    background-image: url(../img/About-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:1850px;
+    height: 800px;
+    
+}
+.logo{
+    margin-right: 10px;
+    margin-top: -70px;
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    padding-left: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 20px;
+}
+
+.logo1{
+    text-decoration: none;
+    color: black;
+}
+.a{
+    color: black;
+    text-decoration: none;
+ }
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-left: 500px;
+    margin-top: -70px;
+}
+.menu a{
+    text-decoration: none;
+    color:black;
+    gap: 80px;
+    font-size: 16px;
+}
+.menu a:hover{
+    
+    color:rgb(5, 69, 5);
+   
+}
+
+.btn{
+    color:white;
+    width: 200px;
+    height: 40px;
+    background-color:  rgb(108, 157, 25);
+    border: 1px green;
+    float: inline;
+  
+    
+}
+.btn:hover{
+    color: rgb(221, 230, 224);
+    background-color:darkolivegreen;
+   
+}
+.product-title{
+    color: rgb(9, 74, 9);  
+    font-size: 100px; 
+    text-align: center; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 150px;
+}
+h1{
+    color: black;
+    font-size: 30px;
+}
+.contenu{
+   margin-top: 85px;
+   margin-left: 100px;
+   display: flex;
+   gap: 100px;
+    margin-bottom: 200px;
+}
+.mision{
+    text-align: justify;
+    font-size: 20px;
+    color: rgb(83, 80, 80);
+}
+.image{
+    width: 600px;
+    height: 500px;
+}
+
+.section3{
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    background-image:url(../img/Call-to-action.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    padding: 50px;
+    height: 200px;
+    margin-top: 50px;
+}
+.footer{
+    display: flex;
+    margin-left: 150px;
+    gap: 60px;
+ }
+ 
+ .menu2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   
+}
+.menu2 a{
+    text-decoration: none;
+    color:black;
+ 
+}
+.menu2 a:hover{
+    
+    color:rgb(13, 115, 13);
+}

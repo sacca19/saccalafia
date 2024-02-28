@@ -1,0 +1,206 @@
+body{
+    font-family:'Montserrat', sans-serif;
+     
+}
+.navigation{
+   align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    font-size:16px;
+    padding-top: 30px;
+
+}
+header{
+    background-image: url(../img/Call-to-action.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    width:1840px;
+    height: 700px;
+}
+.logo{
+    margin-right: 100px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    padding: 0px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 250px;
+    margin-top: -2px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-left: 500px;
+    margin-top: -2px;
+}
+.product-title{
+    color: rgb(108, 157, 25); 
+    font-size: 90px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.email{
+    display: flex;
+}
+
+.menu a{
+    text-decoration: none;
+    color:black;
+    gap: 80px;
+}
+.menu a:hover{
+    
+    color:rgb(5, 69, 5);
+   
+}
+.logo1{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    text-align: center;
+    margin: 50px;
+    padding: 45px;
+    
+    
+}
+.forms{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 40px;
+    padding: 50px;
+}
+.form{
+    font-size: 15px;
+    margin: 20px;
+    gap: 5px;
+    width: 400px;
+    height: 40px;
+}
+textarea{
+    margin-left: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.button{
+    color:white;
+    width: 140px;
+    height: 45px;
+    background-color: rgb(108, 157, 25) ;
+    border: 1px green;
+}
+.button:hover{
+    color: rgb(221, 230, 224);
+    background-color:rgb(4, 62, 4);
+}
+.btn-btn{
+    margin-left: 20px;
+}
+h5{
+    color: gray;
+    font-size: 15px;
+    
+}
+p{
+    color: rgb(36, 126, 36);
+   
+}
+.email{
+    width: 5px;
+    height: 90px;
+    line-height: 1px;
+}
+.EMAIL{
+    background-color:rgb(213, 212, 212);
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border: solid 1px  rgb(108, 157, 25);
+}
+
+  .lot1{
+    margin-left: 20px;
+    text-align: justify;
+    padding-top: -20px;
+  }
+  .Follow{
+    font-size: 20px;
+    color: black;
+  }
+   .icons{
+    display: flex;
+    gap: 10px;
+   }
+  .icon1{
+  background-color:  rgb(108, 157, 25);
+  padding: 10px;
+  border-radius: 100px;
+  height: 15px;
+  width: 15px;
+  color: aliceblue;
+  }
+  .icon2{
+    background-color: rgb(108, 157, 25);
+    padding: 10px;
+    border-radius: 100px;
+    height: 15px;
+    width: 15px;
+    color: aliceblue;
+    }
+  .icon3{
+  background-color:rgb(108, 157, 25);
+  padding: 10px;
+  border-radius: 100px;
+  height: 15px;
+  width: 15px;
+  color: aliceblue;
+  }
+  .icon4{
+    background-color: rgb(108, 157, 25);
+    padding: 10px;
+    border-radius: 100px;
+    height: 15px;
+    width: 15px;
+    color: aliceblue;
+    }
+  .groupe{
+    margin-left: 20px;
+  }
+  .card{
+    border-top: solid 1px rgb(214, 211, 211);
+    padding-top: 25px;
+  }
+
+.footer{
+    display: flex;
+    padding-top: 600px;
+    margin-left: 40px;
+    gap: 60px;
+   font-size: 15px;
+   padding: 0px;
+ }
+ 
+ .menu2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   
+}
+.menu2 a{
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+}
+.menu2 a:hover{
+    
+    color:rgb(13, 115, 13);
+}

@@ -1,0 +1,162 @@
+body{
+    font-family:'Montserrat', sans-serif;
+  
+}
+.navigation{
+   align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+   margin-right: 50px;
+   padding: 10px;
+    height: 50px;
+    display: flex;
+    font-size: small;
+    border-bottom: solid 1px rgb(214, 211, 211);
+
+}
+.logo{
+    margin-right: 1000px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 20px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 100px;
+    margin-left: 200px;
+}
+
+.logo1{
+    text-decoration: none;
+    color: black;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-left: 500px;
+}
+.menu a{
+    text-decoration: none;
+    color:black;
+    gap: 80px;
+}
+.menu a:hover{
+    
+    color:rgb(5, 69, 5);
+   
+}
+.paragraph{
+    display: flex;
+    gap: 460px;
+}
+
+.searchs{
+    display: flex;
+    text-align: left;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+.search{
+    height: 100px;
+    width: 350px;
+}
+.a1{
+    text-decoration: none;
+    color:rgb(126, 123, 123);
+    font-size: small;
+   
+ }
+.form{
+    height: 35px;
+    width: 200px;
+    font-size: 20px;
+    
+    
+}
+.Postercard1{
+    display: flex;
+    text-align: left;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.Postercard2{
+    display: flex;
+    text-align: left;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.Postercard3{
+    display: flex;
+    text-align: left;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.Postercard4{
+    display: flex;
+    text-align: left;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.text{
+    color: rgb(12, 167, 12);
+}
+
+img{
+    width: 240px;
+    height: 280px;
+    margin: 25px;
+    padding: 0px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ 
+ .footer{
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    margin-right: 50px;
+    padding: 0px;
+    display: flex;
+    font-size: large;
+
+   
+ }
+ .card{
+    border-top: solid 1px rgb(214, 211, 211);
+    width: 1750px;
+   padding-top: 50px;
+   padding-bottom: 50px;
+ 
+  }
+
+ .menu2{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 80px;
+    margin-left: 400px;
+   
+}
+.menu2 a{
+    text-decoration: none;
+    color:black;
+ 
+}
+.menu2 a:hover{
+    
+    color:rgb(13, 115, 13);
+}
+ 
