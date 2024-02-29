@@ -8,9 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        include ('includes/header.php');
-    ?>
+<header>
+        <nav class="navigation">
+            <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
+                <div class="menu">
+                <a href="index.php">HOME</a>
+                <a href="ABOUT.php">ABOUT</a>
+                <a href="SHOP.php">SHOP</a>
+                <a href="Contact.php">CONTACT</a>
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
+                </a>
+                
+            </div>
+    </header>       
     <section class="recherche">
         <div class="searchs">
             <div class="search">
@@ -56,20 +70,20 @@
                     </div>
                     <div class="Postercard3">
                         <div>
-                            <a href="posterv1.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
+                            <a href="posterv1.php"><img src="img/PosteV2.jpg" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Poster v1</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="posterv2.php"><img src="assets/img/PosteV1.jpg" alt=""></a> 
+                            <a href="posterv2.php"><img src="img/PosteV1.jpg" alt=""></a> 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v2</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
                         </div>
                         <div>
-                            <a href="posterv3.php"><img src="assets/img/PosteV3.jpg" alt=""></a> 
+                            <a href="posterv3.php"><img src="img/PosteV3.jpg" alt=""></a> 
                             <p style="color: gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v3</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
@@ -77,20 +91,20 @@
                     </div>
                     <div class="Postercard4">
                         <div>
-                            <a href="posterv4.php"><img src="assets/img/Banner.jpg" alt=""></a> 
+                            <a href="posterv4.php"><img src="img/Banner.jpg" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Poster v4</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="posterv5.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
+                            <a href="posterv5.php"><img src="img/PosteV2.jpg" alt=""></a> 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v5</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
                         </div>
                         <div>
-                            <a href="posterv6.php"><img src="assets/img/imag7.png" alt=""></a> 
+                            <a href="posterv6.php"><img src="img/imag7.png" alt=""></a> 
                             <p style="color: gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v6</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>

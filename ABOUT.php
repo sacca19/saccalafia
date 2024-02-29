@@ -8,12 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-<?php 
-        include ('includes/header.php');
-    ?>
+<header>
+        <nav class="navigation">
+            <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
+                <div class="menu">
+                <a href="index.php">HOME</a>
+                <a href="ABOUT.php">ABOUT</a>
+                <a href="SHOP.php">SHOP</a>
+                <a href="Contact.php">CONTACT</a>
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
+                </a>
+                
+            </div>
+           
+        </nav>
+        <div class="container">
+            <h1 class="product-title">WHO ARE WE?</h1>
+        </div>
+    </header>
     <section class="banner">
         <div class="contenu">
-                <img class="image" src="asset/img/img1.png" alt="">
+                <img class="image" src="img/img1.png" alt="">
             <div class="mision">
                 <h1>OUR MISSION</h1>
                 <p> Hello, my name  is Tyler Moore and with the help of many <br> people I made this template. I made it so it is super easy<br> to update and so that it flows perfectly with my tutorials.<br>Lots of love and hundreds of hours went into making it. I <br>hope you love it as much as I do. </p><br>
