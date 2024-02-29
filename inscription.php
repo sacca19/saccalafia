@@ -14,7 +14,7 @@
     <h1>INSCRIPTION</h1>
     </div>
     <br><br><br>
-    <form method="post"action="traitement.php" >
+    <form method="post"action="traitementInscription.php" >
         <label for="nom"> Nom</label>
         <input type="text" id="nom" name="nom" >
         <br>
@@ -25,13 +25,13 @@
         <input type="text" id="pseudo" name="pseudo">
         <br>
         <label for="e_mail">Phonenumber</label>
-        <input type="text" id="phonenumber" name="phonenumber">
+        <input type="tel" id="phonenumber" name="phonenumber">
         <br>
         <label for="e_mail">e_mail</label>
-        <input type="text" id="e_mail" name="e_mail" >
+        <input type="email" id="email" name="email" >
         <br>
         <label for="pass">password</label>
-        <input type="text" id="pass" name="password">
+        <input type="password" id="passwordd" name="passwordd">
         <br>
         <div class="btn">
             <input style="background-color: green; color:white;border-radius:9px " type="submit" value="M'inscrire" name="ok">
