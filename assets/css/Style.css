@@ -11,11 +11,11 @@ form{
     top: 50%;
     transform: translate(-50%,-50%);
     -webkit-transform: translate((-50%,-50%));
+}
+.card{
     border: solid 1px gray;
     padding: 100px;
     background-color: (250, 250, 247);
-    
-    
 }
 .btn{
    margin-left: 100px;
@@ -27,6 +27,7 @@ form{
 .logo{
     text-decoration: none;
     margin-inline-end: auto;
+    color: black;
 }
 submit{
     background-color: blue;
@@ -35,4 +36,13 @@ submit{
 p{
     text-align: center;
     margin-top: -30px;
+}
+.lien{
+    display: flex;
+    color: black;
+    
+    
+}
+p{
+    padding-top: 50px;
 }

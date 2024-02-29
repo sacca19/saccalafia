@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="card">
     <div class="title">
     <h1>INSCRIPTION</h1>
     </div>
@@ -36,8 +37,12 @@
         <div class="btn">
             <input style="background-color: green; color:white;border-radius:9px " type="submit" value="M'inscrire" name="ok">
         </div>
-        
+        <div style="display: flex; gap:15px;">
+        <p style="margin-top: 0px; margin-right: 0px;">Vous avez déjà un compte ? </p> 
+        <a style="text-decoration: none; color:black; " href="Connexion.php"><strong>Se Connecter</strong> </a>
+        </div>
     </form>
+    </div>
     
     <footer>
     
