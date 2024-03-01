@@ -116,20 +116,20 @@
             <h1 style="margin-left: 18px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
             <div class="Postercard1">
                 <div>
-                    <a href="posterv5.php"><img src="img/PosteV1.jpg" alt=""></a>                    
+                    <a href="posterv5.php"><img src="assets/img/PosteV1.jpg" alt=""></a>                    
                     <p style="color: gray; font-size:large; margin-left:20px ;">Poster</p>
                     <a href="" style="margin-left:20px ; color: black;font-size: 15px;">Poster v5</a>
                     <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 16px;">$17.99</p>
                 
                 </div>
                 <div>
-                    <a href="posterv4.php"><img src="img/PosteV1.jpg" alt=""></a>                    
+                    <a href="posterv4.php"><img src="assets/img/PosteV1.jpg" alt=""></a>                    
                     <p style="color:gray; font-size:large;margin-left:20px ;">Poster</p>
                     <a href=""style="margin-left:20px ; color: black;font-size: 15px;">Poster v4</a>
                     <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 16px;">$23.99</p>
                 </div>
                 <div>
-                    <a href="posterv4.php"><img src="img/img"></a>                    
+                    <a href="posterv4.php"><img src="assets/img/img"></a>                    
                     <p style="color: gray; font-size:large;margin-left:20px ;">Poster</p>
                     <a href=""style="margin-left:20px ;color: black; font-size: 15px;">Poster v2</a>
                     <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 16px;">$17.99</p>

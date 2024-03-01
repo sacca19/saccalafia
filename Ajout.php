@@ -18,17 +18,17 @@
     <form method="post"action="traitementajout.php" >
     
         <label for="nom"> article</label>
-        <input type="text" id="nom" name="nom" >
+        <input type="text" id="article" name="article" >
         <br>
         <label for="">Prix</label>
         <input type="text" id="prix" name="prix">
         <br>
         <label for="">description</label>
-        <input type="text" id="description" name="description">
+        <input type="text" id="descriptions" name="descriptions">
         <br>
        
         <label for="">quantite</label>
-        <input type="tex" id="quantite" name="quantite" >
+        <input type="text" id="quantite" name="quantite" >
         <br>
         <label for="">categorie</label>
         <input type="text" id="categorie" name="categorie">

@@ -28,7 +28,7 @@
     </header>       
            <section class="section1">
             <div class="contenu1">
-            <img class="image" src="img/imag5.png" alt="">
+            <img class="image" src="assets/img/imag5.png" alt="">
             <div>
                 <div class="menu1">
                 <a  class="a1"href="index.php">HOME /</a>
@@ -116,20 +116,20 @@
             <h1 style="margin-left: 18px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
             <div class="Postercard1">
                 <div>
-                    <a href="Postcardv3.php"><img src="img/imag3.png" alt=""></a>                     
+                    <a href="Postcardv3.php"><img src="assets/img/imag3.png" alt=""></a>                     
                     <p style="color: gray; font-size:large; margin-left:20px ;">Postcards</p>
                     <a href="" style="margin-left:20px ;font-size: 16px;color: black;">Postcard v3</a>
                     <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 16px;">$14.99</p>
                 
                 </div>
                 <div>
-                    <a href="Postcardv1.php"> <img src="img/imag.png" alt=""></a>                   
+                    <a href="Postcardv1.php"> <img src="assets/img/imag.png" alt=""></a>                   
                     <p style="color:gray; font-size:large;margin-left:20px ;">Postcards</p>
                     <a href=""style="margin-left:20px ;font-size: 16px; color:black">Postcard v1</a>
                     <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 16px;">$14.99</p>
                 </div>
                 <div>
-                    <a href="Postcardv2.php"> <img src="img/imag3.png" alt=""></a>                   
+                    <a href="Postcardv2.php"> <img src="assets/img/imag3.png" alt=""></a>                   
                     <p style="color: gray; font-size:large;margin-left:20px ;">Postcards</p>
                     <a href=""style="margin-left:20px ; font-size: 15px; color: black;">Postcard v2</a>
                     <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 16px;">$17.99</p>

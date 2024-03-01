@@ -1,19 +1,11 @@
 <?php
  
-header('access-control-allow-origin: *');
-header('Access-Control-Allow-Headers: *');
 $HostName = "localhost";
 $DatabaseName = "connexion";
 $HostUser = "root";
 $HostPass = ""; 
  
 $con = mysqli_connect($HostName,$HostUser,$HostPass,$DatabaseName);
- 
-// Storing the received JSON into $json variable.
-$json = file_get_contents('php://input');
- 
-// Decode the received JSON and Store into $obj variable.
-$obj = json_decode($json,true);
  
 $nom= $_POST['nom'];
 $prenom= $_POST['prenom'];
@@ -27,14 +19,7 @@ $passwordd = $_POST['passwordd'];
 	 
 	 if(mysqli_query($con,$Sql_Query)){
 	 
-		 // If the record inserted successfully then show the message.
-		$MSG = 'User Registered Successfully' ;
-		 
-		// Converting the message into JSON format.
-		$json = json_encode($MSG);
-		 
-		// Echo the message.
-		 echo $json ;
+		echo "User Registered Successfully";
 	 
 	 }
 	 else{
