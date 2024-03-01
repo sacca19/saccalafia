@@ -1,7 +1,6 @@
 <footer>
-        <div  class="card">
+      
             <nav class="footer">
-            
                 <div class="menu2">
                 <a href="index.php">HOME</a>
                 <a href="ABOUT.php">ABOUT</a>
@@ -14,5 +13,4 @@
                 <div> <a class="logo1" href="">Copyright © 2024 Planet Ear th Store</a> </div>
                 
         </nav>
-        </div>
         </footer>

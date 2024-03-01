@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/stylepv1.css">
+    <link rel="stylesheet" href="assets/css/Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-<header>
-        <nav class="navigation">
+<header class="shop_header">
+        <nav class="navigation_postcard">
             <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
                 <div class="menu">
                 <a href="index.php">HOME</a>
@@ -33,7 +33,7 @@
                     <div>
                         <input class="form" type="text" id="name" placeholder="search products...">
                         <a href="#">
-                            <i class="fa-solid fa-magnifying-glass" style="font-size: 17px;background-color: rgb(8, 183, 8); margin-left: 10px; padding: 20px; color: white;"></i>
+                            <i class="fa-solid fa-magnifying-glass" style="font-size: 17px;background-color: rgb(8, 183, 8); margin-left: 10px; padding: 14px; color: white;"></i>
                         </a>
                         <form class="multi-range-field my-5 pb-5">
                             <h3>FIlter of price</h3>
@@ -52,9 +52,9 @@
             </div>
             <div class="group">
                 <div class="Postcards">
-                    <a  class="a1"href="index.php">HOME /</a>
-                    <a class="a1" href="SHOP.php">Shop </a>
-                    <p style="color: rgb(30, 148, 30); margin-left: 50px;font-size: 50px;">Posters</p>
+                    <a  class="a1"href="index.html">HOME /</a>
+                    <a class="a1" href="SHOP.html">Shop </a>
+                    <p style="color: rgb(30, 148, 30); margin-left: 50px;font-size: 50px;">Shop</p>
                     <div class="paragraph">
                         <p style="font-size: 12px; margin-left: 50px; color: gray;">Shawing all 12 result</p>
                         <select class="form-select" aria-label="Default select example" style="margin-left: 55px; border: none;">
@@ -68,16 +68,17 @@
                          
                           </select>
                     </div>
+                    
                     <div class="Postercard3">
                         <div>
-                            <a href="posterv1.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
+                            <a href="posterv1.php"><img src="assets/img/PosteV1.jpg" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Poster v1</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="posterv2.php"><img src="assets/img/PosteV1.jpg" alt=""></a> 
+                            <a href="posterv2.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v2</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
@@ -89,16 +90,18 @@
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
                         </div>
                     </div>
+
+
                     <div class="Postercard4">
                         <div>
-                            <a href="posterv4.php"><img src="assets/img/Banner.jpg" alt=""></a> 
+                            <a href="posterv4.php"><img src="assets/img/image6.png" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Poster v4</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
                         <div>
-                            <a href="posterv5.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
+                            <a href="posterv5.php"><img src="assets/img/imag.png" alt=""></a> 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Poster v5</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
@@ -115,6 +118,7 @@
             </div>
             </div>
     </section>
+    
     <?php 
         include ('includes/footer.php');
     ?>

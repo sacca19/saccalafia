@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/stylepv1.css">
+    <link rel="stylesheet" href="assets/css/Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <title>Document</title>
 </head>
+
 <body>
-<header>
-        <nav class="navigation">
-            <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
-                <div class="menu">
+    <header class="shop_header">
+        <nav class="navigation_postcard">
+            <a class="logo" href="index.php"><strong>EARTH STORE</strong></a>
+            <div class="menu">
                 <a href="index.php">HOME</a>
                 <a href="ABOUT.php">ABOUT</a>
                 <a href="SHOP.php">SHOP</a>
@@ -23,70 +25,159 @@
                 <a href="#">
                     <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
                 </a>
-                
+
             </div>
-    </header>       
-           <section class="section1">
-            <div class="contenu1">
-            <img class="image" src="assets/img/imag5.png" alt="">
-            <div>
-                <div class="menu1">
-                <a  class="a1"href="index.php">HOME /</a>
-                <a class="a1" href="Postcards.php">Postcard /</a>
-                <div style="margin-top: -15px;">
-                    <p>Postercard V4</p>
+            </nav>
+            <section class="section1">
+                <div class="contenu1">
+                    <img class="image" src="assets/img/imag.png" alt="">
+                    <div>
+                        <div class="menu1">
+                            <a class="a1" href="index.php">HOME /</a>
+                            <a class="a1" href="Postcards.php">Postcard /</a>
+                            <div style="margin-top: -15px;">
+                                <p>Postercardv1</p>
+                            </div>
+                        </div>
+                        <a class="a2" href="Postcards.php">Postcards</a>
+                        <p style="font-size: xx-large; margin-left:20px ;">Postcards V1</p>
+                        <p style="margin-left:20px ;font-size: 25px;">$23.99</p>
+                        <p style="color:rgb(60, 57, 57);">Sending a travel postcard to a loved one is truly a thoughtful gesture<br> that can bring joy and inspiration. Inspiration can come in the form of<br> taking a break from the normal routine, while being reminded of the<br> more adventurous and exotic destinations around the world.</p>
+                        <div class="card">
+                            <div class="realisation">
+                                <button id="diminuer">-</button>
+                                <p class="nombre" id="valeur">0</p>
+                                <button id="augmenter">+</button>
+                                <input class="btn" type="submit" value="ADD TO CARD">
+                            </div>
+                            <script>
+                                // Récupérer les éléments HTML
+                                var valeurElement = document.getElementById('valeur');
+                                var augmenterButton = document.getElementById('augmenter');
+                                var diminuerButton = document.getElementById('diminuer');
+
+                                // Définir la valeur initiale
+                                var valeur = 0;
+
+                                // Mettre à jour la valeur et afficher
+                                function mettreAJourValeur() {
+                                    valeurElement.textContent = valeur;
+                                }
+
+                                // Augmenter la valeur lors du clic sur le bouton "Augmenter"
+                                augmenterButton.addEventListener('click', function() {
+                                    valeur++;
+                                    mettreAJourValeur();
+                                });
+
+                                // Diminuer la valeur lors du clic sur le bouton "Diminuer"
+                                diminuerButton.addEventListener('click', function() {
+                                    if (valeur > 0) {
+                                        valeur--;
+                                        mettreAJourValeur();
+                                    }
+                                });
+                            </script>
+                            <div class="relie">
+                                <p>Categories</p>
+                                <div class="lien"><a class="a2" href="Postcards.php">Postcards</a></div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                
-                <a class="a2"href="Postcards.php">Postcards</a>
-                <p style= "font-size: xx-large; margin-left:20px ;">Postcards V4</p>
-                <p style="margin-left:20px ;font-size: 25px;">$23.99</p>
-                <p style="color:rgb(60, 57, 57);">Sending a travel postcard to a loved one is truly a thoughtful gesture<br> that can bring joy and inspiration. Inspiration can come in the form of<br> taking a break from the normal routine, while being reminded of the<br> more adventurous and exotic destinations around the world.</p>
-                <div class="card">
-                    <div class="card">
-                        <div  class="realisation">
-                        <button id="diminuer">-</button>
-                        <p  class="nombre"id="valeur">0</p>
-                        <button id="augmenter">+</button>                    
-                       <input class="btn" type="submit" value="ADD TO CARD">
-                </div>
-            <script>
-                    // Récupérer les éléments HTML
-                    var valeurElement = document.getElementById('valeur');
-                    var augmenterButton = document.getElementById('augmenter');
-                    var diminuerButton = document.getElementById('diminuer');
-    
-                    // Définir la valeur initiale
-                    var valeur = 0;
-    
-                    // Mettre à jour la valeur et afficher
-                    function mettreAJourValeur() {
-                    valeurElement.textContent = valeur;
-                    }
-    
-                    // Augmenter la valeur lors du clic sur le bouton "Augmenter"
-                    augmenterButton.addEventListener('click', function() {
-                    valeur++;
-                     mettreAJourValeur();
-                    });
-    
-                    // Diminuer la valeur lors du clic sur le bouton "Diminuer"
-                    diminuerButton.addEventListener('click', function() {
-                        if (valeur > 0) {
-                    valeur--;
-                    mettreAJourValeur();
-                    }
-                    });
-            </script>
-                    <p>Categories</p>
-                    <div class="lien"><a class="a2"href="">Postcards</a></div>
-                    
-                </div>
-                </div>
+            </section>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/stylepv1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a class="logo" href="index.php"><strong>EARTH STORE</strong></a>
+            <div class="menu">
+                <a href="index.php">HOME</a>
+                <a href="ABOUT.php">ABOUT</a>
+                <a href="SHOP.php">SHOP</a>
+                <a href="Contact.php">CONTACT</a>
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
+                </a>
+
             </div>
-        </div>
-        </section>
-        <section class="section2">
+            </nav>
+            <section class="section1">
+                <div class="contenu1">
+                    <img class="image" src="assets/img/imag.png" alt="">
+                    <div>
+                        <div class="menu1">
+                            <a class="a1" href="index.php">HOME /</a>
+                            <a class="a1" href="Postcards.php">Postcard /</a>
+                            <div style="margin-top: -15px;">
+                                <p>Postercardv4</p>
+                            </div>
+                        </div>
+                        <a class="a2" href="Postcards.php">Postcards</a>
+                        <p style="font-size: xx-large; margin-left:20px ;">Postcards V4</p>
+                        <p style="margin-left:20px ;font-size: 25px;">$23.99</p>
+                        <p style="color:rgb(60, 57, 57);">Sending a travel postcard to a loved one is truly a thoughtful gesture<br> that can bring joy and inspiration. Inspiration can come in the form of<br> taking a break from the normal routine, while being reminded of the<br> more adventurous and exotic destinations around the world.</p>
+                        <div class="card">
+                            <div class="realisation">
+                                <button id="diminuer">-</button>
+                                <p class="nombre" id="valeur">0</p>
+                                <button id="augmenter">+</button>
+                                <input class="btn" type="submit" value="ADD TO CARD">
+                            </div>
+                            <script>
+                                // Récupérer les éléments HTML
+                                var valeurElement = document.getElementById('valeur');
+                                var augmenterButton = document.getElementById('augmenter');
+                                var diminuerButton = document.getElementById('diminuer');
+
+                                // Définir la valeur initiale
+                                var valeur = 0;
+
+                                // Mettre à jour la valeur et afficher
+                                function mettreAJourValeur() {
+                                    valeurElement.textContent = valeur;
+                                }
+
+                                // Augmenter la valeur lors du clic sur le bouton "Augmenter"
+                                augmenterButton.addEventListener('click', function() {
+                                    valeur++;
+                                    mettreAJourValeur();
+                                });
+
+                                // Diminuer la valeur lors du clic sur le bouton "Diminuer"
+                                diminuerButton.addEventListener('click', function() {
+                                    if (valeur > 0) {
+                                        valeur--;
+                                        mettreAJourValeur();
+                                    }
+                                });
+                            </script>
+                            <div class="relie">
+                                <p>Categories</p>
+                                <div class="lien"><a class="a2" href="Postcards.php">Postcards</a></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<section class="section2">
             <div class=" lien1">
                 <a class="a3" href="Postcardv4.php">Description</a>
                 <a class="a3" href="Reviews.php">Reviews(0)</a>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style3.css">
+    <link rel="stylesheet" href="assets/css/Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-<header>
-        <nav class="navigation">
+<header class="contact_header">
+        <nav class="contact_navigation">
             <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
                 <div class="menu">
                 <a href="index.php">HOME</a>
@@ -31,20 +31,20 @@
                   
         </div>
     </header>
-    <section  class="formulaire">
-        <div class="forms">
+    <section  class="formulaire3">
+        <div class="contact_forms">
             <div  class="form-control">
                 <h2>Get In Touch</h2>
                 <form >
            
                     <div>
-                        <input class="form" type="text" id="name" placeholder="Fullname">
+                        <input class="form3" type="text" id="name" placeholder="Fullname">
                     </div>
                   <div>
-                    <input class="form" type="text" id="name" placeholder="Phonename">
+                    <input class="form3" type="text" id="name" placeholder="Phonename">
                   </div>
                    <div>
-                    <input class="form" type="text" id="name" placeholder="Email">
+                    <input class="form3" type="text" id="name" placeholder="Email">
                    </div>
                   
                    
@@ -88,7 +88,7 @@
                 <P>malibu,CA,90264</P>
             </div>
     </div>
-            <div class="groupe">
+            <div class="groupe1">
                 
                     <p class="Follow">Follow Us</p>
                 

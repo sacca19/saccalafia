@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=" assets/css/style.css">
+    <link rel="stylesheet" href=" assets/css/Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <title>Document</title>
 </head>
 <body>
-<header>
-        <nav class="navigation">
+<header class="index_header">
+        <nav class="index_navigation">
             <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
                 <div class="menu">
                 <a href="index.php">HOME</a>
@@ -28,7 +28,7 @@
            
         </nav>
         <div class="container">
-            <h1 class="product-title">EARTH</h1>
+            <h1 class="product-title1">EARTH</h1>
                   <p style="font-size: 40px;"> MULTIPURPOSE STORE</p>
                     <input type="submit" value="SHOP NOW">
         </div>
@@ -73,7 +73,7 @@
                 </div>
                 <div>
                     <img class="cote"src="assets/img/Côte.png" alt="">
-                    <p class="P1">Thank you for the excellent shopping<br>experience. It arrived quickly and was<br>exactly as described. I will deHnitely be<br>shopping with you again in the future.</p>
+                    <p style="color: rgb(71, 71, 71);">Thank you for the excellent shopping<br>experience. It arrived quickly and was<br>exactly as described. I will deHnitely be<br>shopping with you again in the future.</p>
                     <img  class="img1"src="assets/img/earth-store-testimonials-avatar-img-1.jpeg" alt="">
                     <p class="say"><strong>JUAN CARLOS</strong></p>
                 </div>
@@ -91,10 +91,10 @@
  <section class="section4" >
 <div class="reference">
     <div style="display: flex;">
-        <div class="card">
+        <div class="icons_card">
             <i class="fa-solid fa-lock" style=" width: 20px;height:20px;  color: white; padding: 17px; padding-top: -20px;"></i>
         </div>
-        <div class="lot1">
+        <div class="index_lot1">
             
             <h6>SECURE PAYMENT</h6>
             <pre>All our payments our SSL secured</pre>
@@ -105,10 +105,10 @@
     </div>
     
     <div>
-        <div class="card">
+        <div class="icons_card">
             <i class="fa-solid fa-truck" style=" width: 20px;height:20px;  color: white; padding: 17px; padding-top: -20px;"></i>
         </div>
-        <div class="lot2" >
+        <div class="index_lot2" >
         <h6>DELIVERED WITH CARE</h6>
         <pre>Super fast shipping to your door</pre>
         </div>
@@ -118,10 +118,10 @@
                
     </div>
     <div>
-        <div class="card">
+        <div class="icons_card">
             <i class="fa-solid fa-truck" style=" width: 20px; height:20px;  color: white; padding: 17px; padding-top: -20px;"></i>
         </div>
-        <div class="lot3" >
+        <div class="index_lot3" >
         <h6>EXCELLENT SERVICE</h6>
         <pre>Live chat and phone support</pre>
         </div>
