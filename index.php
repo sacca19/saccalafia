@@ -13,8 +13,18 @@ session_start();
 </head>
 <body>
 <header class="index_header">
+<p>Bonjour<br><?php
+                if(!isset($_SESSION['id'])){
+                echo'vous êtes hors connexion!';
+             } else{
+                echo $_SESSION['nom'];
+                } ?>
+       
+        </p>
+             <a href="Connexion.php">Connexion</a>
+             <a href="Deconnexion.php">Deconnexion</a>
         <nav class="index_navigation">
-            <a  class="logo" href="index.php"><strong>EARTH STORE <?php echo $_SESSION['nom']?></strong></a>
+            <a  class="logo" href="index.php"><strong>EARTH STORE </strong></a>
                 <div class="menu">
                 <a href="index.php">HOME</a>
                 <a href="ABOUT.php">ABOUT</a>
@@ -33,7 +43,7 @@ session_start();
         <div class="container">
             <h1 class="product-title">EARTH</h1>
                   <p style="font-size: 40px;"> MULTIPURPOSE STORE</p>
-                    <input type="submit" value="SHOP NOW">
+                    <input  class="btn_about"type="submit" value="SHOP NOW">
         </div>
     </header>
     <section class="section1">
@@ -88,8 +98,8 @@ session_start();
         
         <h3>Give the Gift of a Post card</h3>
         <pre>Give the gift of a lasting memory with a postcard</pre>
-        <button class="btn_i">PURCHASE A POST CARD"></button>       
-    </div>i
+        <button class="btn_about">PURCHASE A POST CARD</button>       
+    </div>
  </section>
  <section class="section4" >
 <div class="reference">

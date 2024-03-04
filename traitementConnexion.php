@@ -15,17 +15,9 @@
   }else{
       echo json_encode("echec");
   }*/
-  $servername = 'localhost';
-  $username = 'root';
-  $password = '';
-    try {
-      $bdd = new PDO ("mysql:host=$servername;dbname=connexion",$username,$password);
-      $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    } catch (Exception $e) {
-      echo 'ERREUR :'.$e->getMessage();
-    }
-  
-  
+   
+  include ('includes/auth.php');
+
   // tu peux laisser le controle de isset($_post['ok']) ou bien
   // tu peux enléver
   
@@ -49,6 +41,7 @@
 
           echo $_SESSION['nom'];
           header('LOCATION: index.php');
+          exit;
             }else{
             echo 'Mot de passe  incorrect !';
           }

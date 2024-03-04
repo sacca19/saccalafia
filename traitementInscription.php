@@ -28,16 +28,8 @@ $passwordd = $_POST['passwordd'];
 	 }
  mysqli_close($con);*/
  // CONNEXION A LA BASE DE DONNEES
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-  try {
-    $bdd = new PDO ("mysql:host=$servername;dbname=connexion",$username,$password);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-  } catch (Exception $e) {
-    echo 'ERREUR :'.$e->getMessage();
-  }
-
+ 
+ include ('includes/auth.php');
 
 // tu peux laisser le controle de isset($_post['ok']) ou bien
 // tu peux enléver

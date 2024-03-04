@@ -65,14 +65,6 @@
     padding: 45px;
     
 }
-
-.btn_i{
-    color:white;
-    width: 200px;
-    height: 40px;
-    background-color: rgb(33, 146, 33) ;
-    border: 1px green;
-}
 .services{
     display: flex;
     text-align: left;
@@ -484,19 +476,18 @@ color: rgb(36, 35, 35);
 }
 
 .btn_about{
-    color:white;
     width: 220px;
-    height: 40px;
+    height: 45px;
     background-color:  rgb(108, 157, 25);
     border: 1px green;
     float: inline;
   
-    
 }
-.btn:hover{
+
+.btn_about:hover{
     color: rgb(221, 230, 224);
-    background-color:darkolivegreen;
-   
+    background-color:rgb(17, 112, 33);
+    float: inline;
 }
 .product-title{
     color: rgb(9, 74, 9);  
