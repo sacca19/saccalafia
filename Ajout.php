@@ -37,24 +37,17 @@
     <br><br><br>
     <form method="post"action="traitementajout.php" >
     
-        <label for="nom"> article</label>
-        <input type="text" id="article" name="article" >
+        <label for="nom"> titre</label>
+        <input type="text" id="titre" name="titre" >
         <br>
-        <label for="">Prix</label>
-        <input type="text" id="prix" name="prix">
+        <label for="">contenu</label>
+        <input type="text" id="contenu" name="contenu">
         <br>
-        <label for="">description</label>
-        <input type="text" id="descriptions" name="descriptions">
-        <br>
-       
-        <label for="">quantite</label>
-        <input type="text" id="quantite" name="quantite" >
-        <br>
-        <label for="">categorie</label>
-        <input type="text" id="categorie" name="categorie">
+        <label for="">date</label>
+        <input type="text" id="date_publication" name="date_publication">
         <br>
         <div class="btn">
-            <input style="background-color: green; color:white;border-radius:9px " type="submit" value="ajouter" name="ok">
+            <input type="submit" value="Publier" name="ok">
         </div>
     </form>
     </div>
