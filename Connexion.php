@@ -12,7 +12,7 @@
 
 <body>
     <header class="shop_header">
-        <nav class="navigation">
+        <nav class="navigation_shop">
             <a class="logo" href="index.php"><strong>EARTH STORE</strong></a>
             <div class="menu">
                 <a href="index.php">HOME</a>
@@ -28,14 +28,13 @@
 
             </div>
             </nav>
-
+    </header>
 
 <body>
-    <div class="card">
+    
         <div class="title">
             <h1>CONNEXION</h1>
-        </div>
-
+</div>
         <form method="post" action="traitementConnexion.php">
             <label for="e_mail">e_mail ou ID</label>
             <input type="text" id="email" name="email">
@@ -45,21 +44,13 @@
             <br>
             <a style="color: black;text-decoration:none;padding: top 20px;; " href="">Mot de pase oublié?</a>
             <div class="btn">
-                <input style="background-color: green; color:white;border-radius:9px;padding:7px;padding-bottom: 20pxS;" type="submit" value="Connexion" name="ok">
+                <input style="background-color:green; color:white;border-radius:9px;padding:7px;padding-bottom: 20pxS;" type="submit" value="Connexion" name="ok">
             </div>
             <div style="display: flex; gap: 15px;">
                 <p style="margin-top: 0px; margin-right: 0px;">vous n'avez pas un compte ? </p>
                 <a style="text-decoration: none; color:black;" href="inscription.php"><strong>S'inscrire </strong></a>
             </div>
-        </form>
-
-    </div>
-
-    <footer>
-    <?php 
-        include ('includes/footer.php');
-    ?>
-
+</form>
 </body>
 
 </html>

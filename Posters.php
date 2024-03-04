@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="shop_header">
-        <nav class="navigation_postcard">
+        <nav class="navigation_shop">
             <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
                 <div class="menu">
                 <a href="index.php">HOME</a>
@@ -24,14 +24,15 @@
                 </a>
                 
             </div>
+        </nav>
     </header>       
     <section class="recherche">
-        <div class="searchs">
-            <div class="search">
+        <div class="searchs1">
+            <div class="search1">
                 <form >
            
                     <div>
-                        <input class="form" type="text" id="name" placeholder="search products...">
+                        <input class="form2" type="text" id="name" placeholder="search products...">
                         <a href="#">
                             <i class="fa-solid fa-magnifying-glass" style="font-size: 17px;background-color: rgb(8, 183, 8); margin-left: 10px; padding: 14px; color: white;"></i>
                         </a>
@@ -118,9 +119,10 @@
             </div>
             </div>
     </section>
-    
+    <div class="postcard">
     <?php 
         include ('includes/footer.php');
     ?>
+    </div>
     </body>
     </html>

@@ -66,7 +66,7 @@
                     </div>
                     <div class="lot1">
                         <h5>EMAIL</h5>
-                    <p>something@tyler.com</p>
+                    <p class="contactp">something@tyler.com</p>
                     </div>
             </div>
             <div class="email"> 
@@ -75,7 +75,7 @@
                     </div>
                     <div class="lot1">
                         <h5>PHONE_NUMBER</h5>
-                        <p>202-555-0188</p>
+                        <p class="contactp">202-555-0188</p>
                     </div>
             </div>
             <div class="email"> 
@@ -84,7 +84,7 @@
             </div>
             <div class="lot1">
                 <h5>ADRESS</h5>
-                <p>2727_Ocean_road,</p>
+                <p class="contactp">2727_Ocean_road,</p>
                 <P>malibu,CA,90264</P>
             </div>
     </div>

@@ -66,7 +66,7 @@
     
 }
 
-input{
+.btn_i{
     color:white;
     width: 200px;
     height: 40px;
@@ -194,7 +194,12 @@ pre{
   
 }
 .navigation_postcard{
-    background-color: aqua;
+    align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    padding: 10px;
+    height: 150px;
+    display: flex;
 
 }
 
@@ -208,7 +213,52 @@ pre{
     margin-right: 100px;
     margin-left: 200px;
 }
+.contenu10{
+display: flex;
+gap: 60px;
+margin-left: 100px;
+padding-top: 70px;
+padding-bottom: 50px;
+height: 550px;
+width: 1500px;
+font-size: 20px;
 
+}
+.realisation{
+    display: flex;
+border-bottom: solid rgb(199, 197, 197) 1px;
+}
+.btn_p{
+    background-color: rgb(113, 150, 49);
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    margin-left: 50px;
+}
+.btn_p:hover{
+background-color: rgb(6, 143, 6);
+}
+.nombre{
+    border: solid rgb(39, 39, 39) 1px;
+    background-color: rgb(243, 242, 242);
+    width: 50px;
+    height: 47px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+   
+}
+
+
+.imagepost{
+    width: 600px; ;
+    height: 350px;
+}
+.menu1{
+    display: flex;
+    font-size: small;
+}
 .logo1{
     text-decoration: none;
     color: black;
@@ -229,12 +279,22 @@ pre{
     color:rgb(5, 69, 5);
    
 }
+.button_js{
+    width: 50px;
+    height: 50px;
+    padding: auto;
+}
 .paragraph{
     display: flex;
     gap: 460px;
 }
 
-.searchs{
+.a2p{
+    text-decoration: none;
+    color: rgb(105, 145, 37);
+    padding-top: -20px;
+}
+.searchs1{
     display: flex;
     text-align: left;
     color: black;
@@ -243,22 +303,56 @@ pre{
     gap: 10px;
     justify-content: center;
 }
-.search{
+.search1{
     height: 100px;
     width: 350px;
 }
-.a1{
+.posv1{
+font-size: xx-large; 
+
+}
+.a1p{
     text-decoration: none;
     color:rgb(126, 123, 123);
-    font-size: small;
+    font-size: 20px;
    
  }
-.form{
+ .a2p{
+    text-decoration: none;
+    color: darkolivegreen;
+    font-size: 16px;
+ }
+ .a3p{
+    text-decoration: none;
+    color: rgb(85, 83, 83);
+    font-size: 20px;
+    
+ }
+ 
+.form2 input{
     height: 35px;
     width: 200px;
     font-size: 20px;
-    
-    
+      
+}
+.section2post{
+    margin-left: 100px;
+    font-size: 18px;
+    border-top: solid rgb(194, 191, 191) 1px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.relie{
+    display: flex;
+}
+.lien{
+    padding-top: 22px;
+    margin-left: 5px;
+}
+.bodypost{
+margin-left: 200px;
+color: rgb(36, 35, 35);
 }
 .Postercard1{
     display: flex;
@@ -284,6 +378,10 @@ pre{
     padding: 10px;
     gap: 10px;
 }
+.postcard{
+    border-top: solid rgb(177, 173, 173) 1px;
+    padding-top: 17px;
+}
 .Postercard4{
     display: flex;
     text-align: left;
@@ -291,6 +389,30 @@ pre{
     margin: 10px;
     padding: 10px;
     gap: 10px;
+}
+.footer{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    gap: 60px;
+    padding: 0px;
+
+ }
+ 
+ .menu2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   
+}
+.menu2 a{
+    text-decoration: none;
+    color:black;
+ 
+}
+.menu2 a:hover{
+    
+    color:rgb(13, 115, 13);
 }
 
 
@@ -547,7 +669,7 @@ h5{
     font-size: 15px;
     
 }
-p{
+.contactp{
     color: rgb(36, 126, 36);
    
 }
@@ -717,10 +839,11 @@ p{
     font-size: small;
    
  }
-.form2 input{
+.input{
     height: 35px;
     width: 200px;
     font-size: 20px;
+    
     
     
 }
@@ -782,14 +905,7 @@ a{
 
    
  }
- .card{
-    border-top: solid 1px rgb(214, 211, 211);
-    width: 1750px;
-   padding-top: 50px;
-   padding-bottom: 50px;
  
-  }
-
  .menu2{
     display: flex;
     align-items: center;
@@ -803,6 +919,7 @@ a{
     color:black;
  
 }
+
 .menu2 a:hover{
     
     color:rgb(13, 115, 13);
@@ -824,38 +941,23 @@ form{
     transform: translate(-50%,-50%);
     -webkit-transform: translate((-50%,-50%));
 }
-.card{
-    border: solid 1px gray;
-    padding: 100px;
-    background-color: (250, 250, 247);
-}
+
 .btn6{
    margin-left: 100px;
 }
 .title{
     text-align: center;
-    margin-bottom: 50px;
 }
 .logo{
     text-decoration: none;
     margin-inline-end: auto;
     color: black;
 }
-submit{
-    background-color: blue;
-    float: inline;
-}
-p{
-    text-align: center;
-    margin-top: -30px;
-}
+
 .lien{
     display: flex;
     color: black;
-    
-    
 }
-p{
-    padding-top: 50px;
-}
+
+
 /*fin du style*/

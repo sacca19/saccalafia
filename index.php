@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
 <body>
 <header class="index_header">
         <nav class="index_navigation">
-            <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
+            <a  class="logo" href="index.php"><strong>EARTH STORE <?php echo $_SESSION['nom']?></strong></a>
                 <div class="menu">
                 <a href="index.php">HOME</a>
                 <a href="ABOUT.php">ABOUT</a>
@@ -28,7 +31,7 @@
            
         </nav>
         <div class="container">
-            <h1 class="product-title1">EARTH</h1>
+            <h1 class="product-title">EARTH</h1>
                   <p style="font-size: 40px;"> MULTIPURPOSE STORE</p>
                     <input type="submit" value="SHOP NOW">
         </div>
@@ -85,8 +88,8 @@
         
         <h3>Give the Gift of a Post card</h3>
         <pre>Give the gift of a lasting memory with a postcard</pre>
-        <input type="submit" value="PURCHASE A POST CARD">
-    </div>
+        <button class="btn_i">PURCHASE A POST CARD"></button>       
+    </div>i
  </section>
  <section class="section4" >
 <div class="reference">

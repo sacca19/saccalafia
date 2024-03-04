@@ -10,8 +10,8 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header class="shop_header">
+<body class="bodypost">
+    <header class="postcard_header">
         <nav class="navigation_postcard">
             <a class="logo" href="index.php"><strong>EARTH STORE</strong></a>
             <div class="menu">
@@ -28,27 +28,27 @@
 
             </div>
             </nav>
-            <section class="section1">
-                <div class="contenu1">
-                    <img class="image" src="assets/img/imag.png" alt="">
+            <section class="post_section">
+                <div class="contenu10">
+                    <img class="imagepost" src="assets/img/imag.png" alt="">
                     <div>
                         <div class="menu1">
-                            <a class="a1" href="index.php">HOME /</a>
-                            <a class="a1" href="Posters.php">Poster /</a>
-                            <div style="margin-top: -15px;">
-                                <p>Postercardv1</p>
+                            <a class="a1p" href="index.php">HOME /</a>
+                            <a class="a1p" href="Postcards.php">Posters /</a>
+                            <div style="margin-top: -20px; font-size:20px; color: gray;">
+                                <p >Poster v5</p>
                             </div>
                         </div>
-                        <a class="a2" href="Posters.php">Posters</a>
-                        <p style="font-size: xx-large; margin-left:20px ;">Posters V5</p>
-                        <p style="margin-left:20px ;font-size: 25px;">$23.99</p>
+                        <a class="a2p" href="Postcards.php">Posters</a>
+                        <p style="color: black;">Poster V5</p>
+                        <p style="color: rgb(60,71,71 ); font-size:30px;">$23.99</p>
                         <p style="color:rgb(60, 57, 57);">Sending a travel postcard to a loved one is truly a thoughtful gesture<br> that can bring joy and inspiration. Inspiration can come in the form of<br> taking a break from the normal routine, while being reminded of the<br> more adventurous and exotic destinations around the world.</p>
-                        <div class="card">
+                        <div class="card_trait">
                             <div class="realisation">
-                                <button id="diminuer">-</button>
+                                <button class="button_js" id="diminuer">-</button>
                                 <p class="nombre" id="valeur">0</p>
-                                <button id="augmenter">+</button>
-                                <input class="btn" type="submit" value="ADD TO CARD">
+                                <button class="button_js" id="augmenter">+</button>
+                                <input class="btn_p" type="submit" value="ADD TO CARD">
                             </div>
                             <script>
                                 // Récupérer les éléments HTML
@@ -79,42 +79,42 @@
                                 });
                             </script>
                             <div class="relie">
-                                <p>Categories</p>
-                                <div class="lien"><a class="a2" href="Posters.php">Posters</a></div>
+                                <div><p>Category:</p></div>
+                                <div class="lien"><a class="a2p" href="Postcards.php">Posters</a></div>
 
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <section class="section2post">
+                <div class=" lien1">
+                    <a class="a3p" href="Postcardv1.php">Description</a>
+                    <a class="a3p" href="Reviews.php">Reviews(0)</a>
+                </div>
+                <div class="lot1post">
+                    <p>Paper Type: Matte</p>
+                    <ul>
+                        <li>17.5 pt thickness / 120 lb weight / 324 GSM</li>
+                        <li>Light white, uncoated matte finish with an eggshell texture</li>
+                        <li>Paper is easy to write on and won’t smudge</li>
+                        <li>Made and printed in the USA</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 50px;">
+                    <p>Paper Type: Semi-Gloss</p>
+                    <ul>
+                        <li>12.5 pt thickness / 110 lb weight</li>
+                        <li>Bright white, semi-gloss finish</li>
+                        <li>50% recycled content</li>
+                        <li>FSC certified</li>
+                        <li>Paper imported from Italy; printed in the USA</li>
+                    </ul>
+                    <p style="font-size: 17px; margin-top: 20px;"><strong>Note</strong> :There may be a slight difference in actual color, due to the colors of display.</p>
+                </div>
+            </section>
 
-<section class="section2">
-            <div class=" lien1">
-                <a class="a3" href="posterv5.php">Description</a>
-                <a class="a3" href="Reviews.php">Reviews(0)</a>
-            </div>
-            <div class="lot1">
-                <p>Paper Type: Matte</p>
-            <ul>
-                <li>17.5 pt thickness / 120 lb weight / 324 GSM</li>
-                <li>Light white, uncoated matte finish with an eggshell texture</li>
-                <li>Paper is easy to write on and won’t smudge</li>
-                <li>Made and printed in the USA</li>
-            </ul>
-            </div>
-            <div style="margin-top: 50px;">
-                <p>Paper Type: Semi-Gloss</p>
-                <ul>
-                    <li>12.5 pt thickness / 110 lb weight</li>
-                    <li>Bright white, semi-gloss finish</li>
-                    <li>50% recycled content</li>
-                    <li>FSC certified</li>
-                    <li>Paper imported from Italy; printed in the USA</li>
-                </ul>
-                <p style="font-size: 17px; margin-top: 20px;"><strong>Note</strong> :There may be a slight difference in actual color, due to the colors of display.</p>
-            </div>
-        </section>
-        <section class="section3">
+        <section class="section3post">
             <h1 style="margin-left: 18px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
             <div class="Postercard1">
                 <div>
@@ -139,8 +139,10 @@
             </div>
 
         </section>
+        <div class="postcard">
         <?php 
         include ('includes/footer.php');
     ?>
+    </div>
         </body>
         </html>

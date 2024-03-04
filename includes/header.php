@@ -16,9 +16,3 @@
             </div>
            
         </nav>
-        <div class="container">
-            <h1 class="product-title">EARTH</h1>
-                  <p style="font-size: 40px;"> MULTIPURPOSE STORE</p>
-                    <input type="submit" value="SHOP NOW">
-        </div>
-    </header>

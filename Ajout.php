@@ -12,7 +12,7 @@
 
 <body>
     <header class="shop_header">
-        <nav class="navigation">
+        <nav class="navigation_shop">
             <a class="logo" href="index.php"><strong>EARTH STORE</strong></a>
             <div class="menu">
                 <a href="index.php">HOME</a>
@@ -28,7 +28,7 @@
 
             </div>
             </nav>
-
+    </header>
 <body>
     <div class="card">
     <div class="title">

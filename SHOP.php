@@ -23,7 +23,8 @@
                     <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
                 </a>
                 
-            </div>
+         </nav>   
+        </div>
     </header>       
     <section class="recherche">
         <div class="searchs1">
@@ -52,8 +53,8 @@
             </div>
             <div class="group2">
                 <div class="Postcards">
-                    <a  class="a1"href="index.html">HOME /</a>
-                    <a class="a1" href="SHOP.html">Shop </a>
+                    <a  class="a1"href="index.php">HOME /</a>
+                    <a class="a1" href="SHOP.php">Shop </a>
                     <p style="color: rgb(30, 148, 30); margin-left: 50px;font-size: 50px;">Shop</p>
                     <div class="paragraph">
                         <p style="font-size: 12px; margin-left: 50px; color: gray;">Shawing all 12 result</p>
@@ -164,9 +165,10 @@
             </div>
             </div>
     </section>
-    
+    <div class="postcard">
     <?php 
         include ('includes/footer.php');
     ?>
+    </div>
     </body>
     </html>
