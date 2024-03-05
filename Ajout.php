@@ -43,9 +43,6 @@
         <label for="">contenu</label>
         <input type="text" id="contenu" name="contenu">
         <br>
-        <label for="">date</label>
-        <input type="text" id="date_publication" name="date_publication">
-        <br>
         <div class="btn">
             <input type="submit" value="Publier" name="ok">
         </div>
