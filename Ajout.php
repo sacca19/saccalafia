@@ -43,6 +43,12 @@
         <label for="">contenu</label>
         <input type="text" id="contenu" name="contenu">
         <br>
+        <label for="nom"> Prix</label>
+        <input type="text" id="prix" name="prix" >
+        <br>
+        <label for="nom"> Categorie</label>
+        <input type="text" id="categorie" name="categorie" >
+        <br>
         <div class="btn">
             <input type="submit" value="Publier" name="ok">
         </div>
