@@ -5,7 +5,7 @@ use function PHPSTORM_META\exitPoint;
 session_start();
 
 session_destroy();
-header('Location:index.php');
+header('Location:Connexion.php');
 exit;
 
 ?>

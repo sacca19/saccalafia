@@ -1,3 +1,7 @@
+<?php
+include('includes/auth.php');                         
+                                                    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +73,14 @@
                          
                           </select>
                     </div>
+                     <?php
+                              $reqData = $bdd->prepare('SELECT * FROM produits');
+                              $reqData->execute();
+                              $resultat = $reqData->fetch();
+
+                    ?>
                     <div class="Postercard1">
+                       
                         <div>
                             <a href="Postcardv1.php"><img src="assets/img/imag2.png" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Postcards</p>
@@ -91,7 +102,7 @@
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
                         </div>
                     </div>
-
+                    
 
                     <div class="Postercard2">
                         <div>

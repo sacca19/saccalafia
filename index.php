@@ -15,7 +15,7 @@ session_start();
 <header class="index_header">
 <p>Bonjour<?php
                 if(!isset($_SESSION['id'])){
-                echo'vous êtes hors connexion!';
+                echo' vous êtes  hors connexion';
              } else{
                 echo $_SESSION['nom'];
                 } ?>

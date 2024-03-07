@@ -23,8 +23,8 @@
         $passwordVerrify = password_verify($password,$resultat['passwordd']);
         if ($passwordVerrify) {
           $_SESSION['nom'] = $resultat['nom'];
+          $_SESSION['id'] = $resultat['id'];
 
-          echo $_SESSION['nom'];
           header('LOCATION: index.php');
           exit;
             }else{

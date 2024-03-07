@@ -35,8 +35,9 @@
     <h1>Ajout articles</h1>
     </div>
     <br><br><br>
-    <form method="post"action="traitementajout.php" >
-    
+    <form method="post"action="traitementajout.php" enctype="multipart/form-data" >
+        <label for="file">image</label>
+        <input type="file" name="image" >
         <label for="nom"> titre</label>
         <input type="text" id="titre" name="titre" >
         <br>

@@ -12,7 +12,7 @@
     display: flex;
 }
 .index_header{
-    background-image: url(../img/Banner.jpg);
+    background-image: url(../img/img13.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: 100%;
@@ -109,7 +109,7 @@ pre{
     justify-content: center;
     text-align: center;
     font-size: 30px;
-    background-image:url(../img/Call-to-action.jpg);
+    background-image:url(../img/img11.jpg);
     background-repeat:no-repeat;
     background-size: cover;
     padding: 100px;

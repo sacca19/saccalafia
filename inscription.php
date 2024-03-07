@@ -56,7 +56,7 @@
         </div>
         <div style="display: flex; gap:15px;">
         <p style="margin-top: 0px; margin-right: 0px;">Vous avez déjà un compte ? </p> 
-        <a style="text-decoration: none; color:black; " href="Connexion.php"><strong>Se Connecter</strong> </a>
+        <a style="text-decoration: none; color:blue; font-size:15px; " href="Connexion.php"><strong>Se Connecter</strong> </a>
         </div>
     </form>
 </body>       
