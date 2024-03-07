@@ -1,5 +1,7 @@
-<header>
+
         <nav class="navigation">
+             <a href="Connexion.php">Connexion</a>
+             <a href="Deconnexion.php">Deconnexion</a>
             <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
                 <div class="menu">
                 <a href="index.php">HOME</a>

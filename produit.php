@@ -1,5 +1,15 @@
+<?php
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+
+    include('includes/auth.php');
+
+    $recupData = $bdd->prepare('SELECT * FROM produits WHERE id = ?');
+    $recupData->execute(array($_GET['id']));
+    $resultat = $recupData->fetch();
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -12,25 +22,13 @@
 
 <body class="bodypost">
     <header class="postcard_header">
-        <nav class="navigation_postcard">
-            <a class="logo" href="index.php"><strong>EARTH STORE</strong></a>
-            <div class="menu">
-                <a href="index.php">HOME</a>
-                <a href="ABOUT.php">ABOUT</a>
-                <a href="SHOP.php">SHOP</a>
-                <a href="Contact.php">CONTACT</a>
-                <a href="#">
-                    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-
-            </div>
-            </nav>
+        
+    <?php 
+        include ('includes/header.php');
+    ?>
             <section class="post_section">
                 <div class="contenu10">
-                    <img class="imagepost" src="assets/img/imag.png" alt="">
+                    <img class="imagepost" src="<?=$resultat['image'] ?>" alt="">
                     <div>
                         <div class="menu1">
                             <a class="a1p" href="index.php">HOME /</a>
@@ -39,10 +37,10 @@
                                 <p >Postercardv1</p>
                             </div>
                         </div>
-                        <a class="a2p" href="Postcards.php">Postcards</a>
-                        <p style="color: black;">Postcards V1</p>
-                        <p style="color: rgb(60,71,71 ); font-size:30px;">$23.99</p>
-                        <p style="color:rgb(60, 57, 57);">Sending a travel postcard to a loved one is truly a thoughtful gesture<br> that can bring joy and inspiration. Inspiration can come in the form of<br> taking a break from the normal routine, while being reminded of the<br> more adventurous and exotic destinations around the world.</p>
+                        <a class="a2p" href="Postcards.php"><?=$resultat['categorie'] ?></a>
+                        <p style="color: black;"><?=$resultat['titre'] ?></p>
+                        <p style="color: rgb(60,71,71 ); font-size:30px;"><?=$resultat['prix'] ?> Fcfa</p>
+                        <p style="color:rgb(60, 57, 57);"><?=$resultat['contenu'] ?></p>
                         <div class="card_trait">
                             <div class="realisation">
                                 <button class="button_js" id="diminuer">-</button>

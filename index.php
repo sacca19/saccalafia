@@ -1,4 +1,6 @@
 <?php
+include('includes/auth.php');                         
+                                                    
 session_start();
 ?>
 <!DOCTYPE html>
@@ -12,7 +14,6 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-<header class="index_header">
 <p>Bonjour<?php
                 if(!isset($_SESSION['id'])){
                 echo' vous êtes  hors connexion';
@@ -21,54 +22,36 @@ session_start();
                 } ?>
        
         </p>
-             <a href="Connexion.php">Connexion</a>
-             <a href="Deconnexion.php">Deconnexion</a>
-        <nav class="index_navigation">
-            <a  class="logo" href="index.php"><strong>EARTH STORE </strong></a>
-                <div class="menu">
-                <a href="index.php">HOME</a>
-                <a href="ABOUT.php">ABOUT</a>
-                <a href="SHOP.php">SHOP</a>
-                <a href="Contact.php">CONTACT</a>
-                <a href="#">
-                    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-                
-            </div>
-           
-        </nav>
+<header class="index_header">
+             
+        <?php 
+        include ('includes/header.php');
+    ?>
         <div class="container">
             <h1 class="product-title">EARTH</h1>
                   <p style="font-size: 40px;"> MULTIPURPOSE STORE</p>
                     <input  class="btn_about"type="submit" value="SHOP NOW">
         </div>
     </header>
-    <section class="section1">
-            <div class="services">
-                        <div>
-                            <img src="assets/img/PosteV1.jpg" alt="">
-                            <p class="paragraph"color: gray; font-size: small; margin-left:20px ;">Posters</p>
-                            <a href="" style="margin-left:20px ;">Poster v1</a>
-                            <p class="paragraph">$23.99</p>
-                        
+    <div class="produits">
+                    <?php
+                            $reqData = $bdd->prepare('SELECT * FROM produits');
+                            $reqData->execute();
+                            
+                            while($resultat = $reqData->fetch()){
+                                ?>
+                        <div class="produit">
+                            <a href="produit.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
+                            <p><?= $resultat['contenu']?></p>
+                            <a href="produit.php?id=<?= $resultat['id']?>"><?= $resultat['titre']?></a>
+                            <span><?= $resultat['prix']?></span>
+                            
                         </div>
-                        <div>
-                            <img src="assets/img/PosteV2.jpg" alt="">
-                            <p class="paragraph">Posters</p>
-                            <a href=""style="margin-left:20px ;">Poster v2</a>
-                            <p class="paragraph">$17.99</p>
-                        </div>
-                        <div>
-                            <img src="assets/img/PosteV3.jpg" alt="">
-                            <p class="paragraph">Posters</p>
-                            <a href=""style="margin-left:20px ;">Poster v3</a>
-                            <p class="paragraph">$14.99</p>
-                        </div>
-                 <div>
- </section>
+                        <?php
+                        }
+                    ?>
+                    </div>
+
  <section class="section2" style="border-top: solid 1px rgb(200, 194, 194);">
     <h2>What Our Customers Say</h2>
              <div class="services">

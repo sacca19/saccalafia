@@ -12,25 +12,12 @@
 
 <body>
     <header class="shop_header">
-        <nav class="navigation_shop">
-            <a class="logo" href="index.php"><strong>EARTH STORE</strong></a>
-            <div class="menu">
-                <a href="index.php">HOME</a>
-                <a href="ABOUT.php">ABOUT</a>
-                <a href="SHOP.php">SHOP</a>
-                <a href="Contact.php">CONTACT</a>
-                <a href="#">
-                    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-
-            </div>
-            </nav>
+    <?php 
+        include ('includes/header.php');
+    ?>
     </header>
 <body>
-    <div class="card">
+    
     <div class="title">
     <h1>Ajout articles</h1>
     </div>
@@ -47,8 +34,20 @@
         <label for="nom"> Prix</label>
         <input type="text" id="prix" name="prix" >
         <br>
-        <label for="nom"> Categorie</label>
-        <input type="text" id="categorie" name="categorie" >
+        <select name="id_categorie">
+      <option selected>Choisis...</option>
+      <?php
+        $reqData = $bdd->prepare('SELECT * FROM categories');
+        $reqData->execute();
+
+        while($datacat = $reqData->fetch()){
+        ?>
+        <option value="<?= $datacat['id']?>"><?= $datacat['nom']?></option>
+      <?php
+      }
+    ?>
+      
+    </select>
         <br>
         <div class="btn">
             <input type="submit" value="Publier" name="ok">

@@ -68,22 +68,22 @@
                          
                           </select>
                     </div>
-                    <div class="Postercard1">
-                        <div>
+                    <div class="produits">
+                        <div class="produit>
                             <a href="Postcardv1.php"><img src="assets/img/imag2.png" alt=""></a> 
                             <p style="color: gray; font-size: small; margin-left:20px ;">Postcards</p>
                             <a href="" style="margin-left:20px ;font-size: 14px;">Postcard v1</a>
                             <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
                         
                         </div>
-                        <div>
+                        <div class="">
                             <a href="Postcardv2.php"><img src="assets/img/img9.png" alt=""></a> 
 
                             <p style="color:gray; font-size: small;margin-left:20px ;">Postcards</p>
                             <a href=""style="margin-left:20px ;font-size: 14px;">Postcard v2</a>
                             <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
                         </div>
-                        <div>
+                        <div class="produit">
                             <a href="Postcardv3.php"><img src="assets/img/imag3.png" alt=""></a> 
                             <p style="color: gray; font-size: small;margin-left:20px ;">Postcards</p>
                             <a href=""style="margin-left:20px ; font-size: 14px;">Postcard v3</a>

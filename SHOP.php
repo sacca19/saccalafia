@@ -13,28 +13,14 @@ include('includes/auth.php');
 </head>
 <body>
 <header class="shop_header">
-        <nav class="navigation_shop">
-            <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
-                <div class="menu">
-                <a href="index.php">HOME</a>
-                <a href="ABOUT.php">ABOUT</a>
-                <a href="SHOP.php">SHOP</a>
-                <a href="Contact.php">CONTACT</a>
-                <a href="#">
-                    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-user" style="font-size: 25px;margin-top: -10px;"></i>
-                </a>
-                
-         </nav>   
-        </div>
+<?php 
+        include ('includes/header.php');
+    ?>
     </header>       
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
                 <form >
-           
                     <div>
                         <input class="form2" type="text" id="name" placeholder="search products...">
                         <a href="#">
@@ -51,14 +37,14 @@ include('includes/auth.php');
                     <p style="font-size: 13px;"><strong>Posters(6)</strong></p>
                     <p style="font-size: 13px;"><strong>Posters(6)</strong></p>
                 </div>
-                <div style="margin-top: -90px; height: 1900px ; border-right: solid 1px rgb(194, 184, 184);">
-               
-                </div>
+              
             </div>
-            <div class="group2">
+            <div class="group2" style="border-left: solid 1px gray; padding:10px">
                 <div class="Postcards">
-                    <a  class="a1"href="index.php">HOME /</a>
-                    <a class="a1" href="SHOP.php">Shop </a>
+                <div class="menu1">
+                            <a class="a1p" href="index.php">HOME /</a>
+                            <a class="a1p" href="Postcards.php">Shop /</a>
+                            </div>
                     <p style="color: rgb(30, 148, 30); margin-left: 50px;font-size: 50px;">Shop</p>
                     <div class="paragraph">
                         <p style="font-size: 12px; margin-left: 50px; color: gray;">Shawing all 12 result</p>
@@ -73,113 +59,33 @@ include('includes/auth.php');
                          
                           </select>
                     </div>
-                     <?php
-                              $reqData = $bdd->prepare('SELECT * FROM produits');
-                              $reqData->execute();
-                              $resultat = $reqData->fetch();
-
-                    ?>
-                    <div class="Postercard1">
-                       
-                        <div>
-                            <a href="Postcardv1.php"><img src="assets/img/imag2.png" alt=""></a> 
-                            <p style="color: gray; font-size: small; margin-left:20px ;">Postcards</p>
-                            <a href="" style="margin-left:20px ;font-size: 14px;">Postcard v1</a>
-                            <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
-                        
-                        </div>
-                        <div>
-                            <a href="Postcardv2.php"><img src="assets/img/img9.png" alt=""></a> 
-
-                            <p style="color:gray; font-size: small;margin-left:20px ;">Postcards</p>
-                            <a href=""style="margin-left:20px ;font-size: 14px;">Postcard v2</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
-                        </div>
-                        <div>
-                            <a href="Postcardv3.php"><img src="assets/img/imag3.png" alt=""></a> 
-                            <p style="color: gray; font-size: small;margin-left:20px ;">Postcards</p>
-                            <a href=""style="margin-left:20px ; font-size: 14px;">Postcard v3</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
-                        </div>
-                    </div>
                     
-
-                    <div class="Postercard2">
-                        <div>
-                            <a href="Postcardv4.php"><img src="assets/img/imag5.png" alt=""></a> 
-                            <p style="color: gray; font-size: small; margin-left:20px ;">Postcards</p>
-                            <a href="" style="margin-left:20px ; font-size: 14px;">Postcard v4</a>
-                            <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
-                        
+                    <div class="produits">
+                    <?php
+                            $reqData = $bdd->prepare('SELECT * FROM produits');
+                            $reqData->execute();
+                            
+                            while($resultat = $reqData->fetch()){
+                                ?>
+                        <div class="produit">
+                            <a href="produit.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
+                            <p><?= $resultat['contenu']?></p>
+                            <a href="produit.php?id=<?= $resultat['id']?>"><?= $resultat['titre']?></a>
+                            <span><?= $resultat['prix']?></span>
+                            
                         </div>
-                        <div>
-                            <a href="Postcardv5.php"><img src="assets/img/imag4.png" alt=""></a> 
-                            <p style="color:gray; font-size: small;margin-left:20px ;">Postcards</p>
-                            <a href=""style="margin-left:20px ;font-size: 14px;">Postcard v5</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
-                        </div>
-                        <div>
-                            <a href="Postcardv6.php"><img src="assets/img/image6.png" alt=""></a> 
-                            <p style="color: gray; font-size: small;margin-left:20px ;">Postcard</p>
-                            <a href=""style="margin-left:20px ;font-size: 14px;">Postcard v6</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
-                        </div>
-                    </div>
-
-
-                    <div class="Postercard3">
-                        <div>
-                            <a href="posterv1.php"><img src="assets/img/PosteV1.jpg" alt=""></a> 
-                            <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
-                            <a href="" style="margin-left:20px ;font-size: 14px;">Poster v1</a>
-                            <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
-                        
-                        </div>
-                        <div>
-                            <a href="posterv2.php"><img src="assets/img/PosteV2.jpg" alt=""></a> 
-                            <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
-                            <a href=""style="margin-left:20px ;font-size: 14px;">Poster v2</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
-                        </div>
-                        <div>
-                            <a href="posterv3.php"><img src="assets/img/PosteV3.jpg" alt=""></a> 
-                            <p style="color: gray; font-size: small;margin-left:20px ;">Posters</p>
-                            <a href=""style="margin-left:20px ;font-size: 14px;">Poster v3</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
-                        </div>
-                    </div>
-
-
-                    <div class="Postercard4">
-                        <div>
-                            <a href="posterv4.php"><img src="assets/img/image6.png" alt=""></a> 
-                            <p style="color: gray; font-size: small; margin-left:20px ;">Posters</p>
-                            <a href="" style="margin-left:20px ;font-size: 14px;">Poster v4</a>
-                            <p style="color:rgb(60, 57, 57); margin-left:20px ;font-size: 12px;">$23.99</p>
-                        
-                        </div>
-                        <div>
-                            <a href="posterv5.php"><img src="assets/img/imag.png" alt=""></a> 
-                            <p style="color:gray; font-size: small;margin-left:20px ;">Posters</p>
-                            <a href=""style="margin-left:20px ;font-size: 14px;">Poster v5</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$17.99</p>
-                        </div>
-                        <div>
-                            <a href="posterv6.php"><img src="assets/img/imag7.png" alt=""></a> 
-                            <p style="color: gray; font-size: small;margin-left:20px ;">Posters</p>
-                            <a href=""style="margin-left:20px ;font-size: 14px;">Poster v6</a>
-                            <p style="color:rgb(60, 57, 57);margin-left:20px ;font-size: 12px;">$14.99</p>
-                        </div>
+                        <?php
+                        }
+                    ?>
                     </div>
                 </div>
                     
             </div>
-            </div>
+        </div>
     </section>
-    <div class="postcard">
+    
     <?php 
         include ('includes/footer.php');
     ?>
-    </div>
     </body>
     </html>
