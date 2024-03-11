@@ -19,14 +19,16 @@
 
 <body>
     
-        <div class="title">
+<div class="form">
             <h1>CONNEXION</h1>
-</div>
-        <form method="post" action="traitementConnexion.php">
+
+    <form method="post" action="traitementConnexion.php">
             <label for="e_mail">e_mail ou ID</label>
+            <br>
             <input type="text" id="email" name="email">
             <br>
             <label for="pass"> password</label>
+            <br>
             <input type="password" id="passwordd" name="passwordd">
             <br>
             <a style="color: black;text-decoration:none;padding: top 20px;; " href="">Mot de pase oublié?</a>
@@ -37,7 +39,11 @@
                 <p style="margin-top: 0px; margin-right: 0px;">vous n'avez pas un compte ? </p>
                 <a style="text-decoration: none; color:black;" href="inscription.php"><strong>S'inscrire </strong></a>
             </div>
-</form>
+    </form>
+</div>
+<?php 
+        include ('includes/footer.php');
+    ?>
 </body>
 
 </html>

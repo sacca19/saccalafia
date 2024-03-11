@@ -1,13 +1,12 @@
 
         <nav class="navigation">
-             <a href="Connexion.php">Connexion</a>
-             <a href="Deconnexion.php">Deconnexion</a>
-            <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>
+            <a  class="logo" href="Connexion.php"><strong> Connexion</strong></a>
                 <div class="menu">
-                <a href="index.php">HOME</a>
-                <a href="ABOUT.php">ABOUT</a>
-                <a href="SHOP.php">SHOP</a>
-                <a href="Contact.php">CONTACT</a>
+               <strong><a href="index.php">ACCUEIL</a></strong> 
+               <strong><a href="ABOUT.php">A PROPOS</a></strong>  
+               <strong><a href="Boutiques.php">BOUTIQUES</a></strong>
+               <strong><a href="Contact.php">CONTACT</a></strong> 
+                <strong><a href="formation.php">FORMATION</a></strong>
                 <a href="#">
                     <i class="fa-solid fa-bag-shopping" style="font-size: 25px;margin-top: -10px;"></i>
                 </a>

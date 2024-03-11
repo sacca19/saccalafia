@@ -10,11 +10,11 @@
 
 
 // Récupérer la valeur du champ du formulaire
-$nom = htmlspecialchars($_POST['nom']);
+$distinction = htmlspecialchars($_POST['type_client']);
 
 // Requête d'insertion
-$req = $bdd->prepare("INSERT INTO categorie(nom) VALUES (?)");
-$req->execute(array($nom));
+$req = $bdd->prepare("INSERT INTO clients(type_client) VALUES (?)");
+$req->execute(array($distinction));
 echo "Donnée insérée avec succès !";
 ?>
 

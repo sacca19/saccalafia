@@ -19,11 +19,12 @@ session_start();
 </header>
 <body>
     <div class="form">
-    <h2>Type de catégorie</h2>
-    <form action="traitementcategorie.php" method="post">
-        <label for="nom">Nom :</label>
+    <h2>Type de clients</h2>
+    <form action="traitementclient.php" method="post">
+        
+        <label for="nom">type de client :</label>
         <br>
-        <input type="text" id="nom" name="nom">
+        <input type="text" id="type_client" name="type_client">
         <br>
         <input type="submit" value="Envoyer">
     </form>

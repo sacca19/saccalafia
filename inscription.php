@@ -15,29 +15,42 @@
     </header>       
 
 <body>
-    <div class="title">
+    <div class="form">
     <h1>INSCRIPTION</h1>
-    </div>
+   
     <br><br><br>
     <form method="post"action="traitementInscription.php" >
         <label for="nom"> Nom</label>
+        <br>
         <input type="text" id="nom" name="nom" >
         <br>
         <label for="prenom">Prénom</label>
+        <br>
         <input type="text" id="prenom" name="prenom">
         <br>
         <label for="Pseudo">Pseudo</label>
+        <br>
         <input type="text" id="pseudo" name="pseudo">
         <br>
         <label for="e_mail">Phonenumber</label>
+        <br>
         <input type="tel" id="phonenumber" name="phonenumber">
         <br>
         <label for="e_mail">e_mail</label>
+        <br>
         <input type="email" id="email" name="email" >
         <br>
         <label for="pass">password</label>
+        <br>
         <input type="password" id="passwordd" name="passwordd">
         <br>
+        <label for="ville">Ville*</label>
+        <br>
+        <input type="text" id="ville" name="ville">
+        <br>
+        <label for="quartier">Quartier*</label>
+        <br>
+        <input type="text" id="quartier" name="quartier">
         <div class="btn6">
             <input style="background-color:green; color:white;border-radius:9px " type="submit" value="M'inscrire" name="ok">
         </div>
@@ -46,6 +59,10 @@
         <a style="text-decoration: none; color:blue; font-size:15px; " href="Connexion.php"><strong>Se Connecter</strong> </a>
         </div>
     </form>
+    </div>
+    <?php 
+        include ('includes/footer.php');
+    ?>
 </body>       
    
 </html>

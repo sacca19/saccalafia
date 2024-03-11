@@ -34,8 +34,17 @@ include('includes/auth.php');
                 </form>
                 <div class="text">
                     <h3>Categories</h3>
-                    <p style="font-size: 13px;"><strong>Posters(6)</strong></p>
-                    <p style="font-size: 13px;"><strong>Posters(6)</strong></p>
+                    <?php
+        $reqData = $bdd->prepare('SELECT * FROM categorie');
+        $reqData->execute();
+
+        while ($datacat = $reqData->fetch()) {
+            ?>
+            <option value="<?= $datacat['id'] ?>"><?= $datacat['nom'] ?></option>
+            <?php
+            
+        }
+        ?>
                 </div>
               
             </div>

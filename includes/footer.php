@@ -2,16 +2,16 @@
         <div class="postcard">
             <nav class="footer">
                 <div class="menu2">
-                <a href="index.php">HOME</a>
-                <a href="ABOUT.php">ABOUT</a>
-                <a href="SHOP.php">SHOP</a>
+                <a href="index.php">ACCUEIL</a>
+                <a href="ABOUT.php">A PROPOS</a>
+                <a href="Boutiques.php">BOUTIQUES</a>
                 <a href="Contact.php">CONTACT</a> 
+                <a href="Formation.php">FORMATION</a> 
                 </div>
                 <div>
-                    <a  class="logo" href="index.php"><strong>EARTH STORE</strong></a>  
+               
+                    <a  class="logo" href="Deconnexion.php"><strong>Deconnexion </strong></a>  
                 </div>
-                <div> <a class="logo1" href="">Copyright © 2024 Planet Ear th Store</a> </div>
-                
         </nav>
         </div>
         </footer>

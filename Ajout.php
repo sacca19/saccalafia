@@ -1,7 +1,12 @@
+<?php 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+ include ('includes/auth.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head > 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/Style.css">
@@ -22,37 +27,45 @@
     <h1>Ajout articles</h1>
     </div>
     <br><br><br>
-    <form method="post"action="traitementajout.php" enctype="multipart/form-data" >
-        <label for="file">image</label>
-        <input type="file" name="image" >
-        <label for="nom"> titre</label>
-        <input type="text" id="titre" name="titre" >
-        <br>
-        <label for="">contenu</label>
-        <input type="text" id="contenu" name="contenu">
-        <br>
-        <label for="nom"> Prix</label>
-        <input type="text" id="prix" name="prix" >
-        <br>
-        <select name="id_categorie">
-      <option selected>Choisis...</option>
-      <?php
-        $reqData = $bdd->prepare('SELECT * FROM categories');
+    <form method="post" action="traitementajout.php" enctype="multipart/form-data">
+    <label for="file">Image</label>
+    <br>
+    <input type="file" name="image">
+    <br>
+    <label for="titre">Titre</label>
+    <br>
+    <input type="text" id="titre" name="titre">
+    <br>
+    <label for="contenu">Contenu</label>
+    <br>
+    <input type="text" id="contenu" name="contenu">
+    <br>
+    <label for="prix">Prix</label>
+    <br>
+    <input type="text" id="prix" name="prix">
+    <br>
+    <label for="id_categorie">Catégorie</label>
+    <br>
+    <select name="id_categorie">
+        <option selected>Choisir catégorie</option>
+        <?php
+        $reqData = $bdd->prepare('SELECT * FROM categorie');
         $reqData->execute();
 
-        while($datacat = $reqData->fetch()){
+        while ($datacat = $reqData->fetch()) {
+            ?>
+            <option value="<?= $datacat['id'] ?>"><?= $datacat['nom'] ?></option>
+            <?php
+            
+        }
         ?>
-        <option value="<?= $datacat['id']?>"><?= $datacat['nom']?></option>
-      <?php
-      }
-    ?>
-      
     </select>
-        <br>
-        <div class="btn">
-            <input type="submit" value="Publier" name="ok">
-        </div>
-    </form>
+    <br>
+    <div class="btn">
+        <input type="submit" value="Publier" name="ok">
+    </div>
+</form>
+
     </div>
     
     <footer>

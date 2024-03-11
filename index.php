@@ -27,11 +27,7 @@ session_start();
         <?php 
         include ('includes/header.php');
     ?>
-        <div class="container">
-            <h1 class="product-title">EARTH</h1>
-                  <p style="font-size: 40px;"> MULTIPURPOSE STORE</p>
-                    <input  class="btn_about"type="submit" value="SHOP NOW">
-        </div>
+        
     </header>
     <div class="produits">
                     <?php
@@ -42,7 +38,7 @@ session_start();
                                 ?>
                         <div class="produit">
                             <a href="produit.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
-                            <p><?= $resultat['contenu']?></p>
+                            <p><?= $resultat['categorie']?></p>
                             <a href="produit.php?id=<?= $resultat['id']?>"><?= $resultat['titre']?></a>
                             <span><?= $resultat['prix']?></span>
                             

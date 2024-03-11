@@ -11,10 +11,10 @@ if (isset($_POST['ok'])) {
 	$titre = htmlspecialchars($_POST['titre']);
 	$contenu = htmlspecialchars($_POST['contenu']);
 	$prix = htmlspecialchars($_POST['prix']);
-	$categorie = htmlspecialchars($_POST['categorie']);
+	$id_categorie = htmlspecialchars($_POST['id_categorie']);
 	
   
-	if (!empty($titre) && !empty($contenu) && !empty($prix) && !empty($categorie)) {
+	if (!empty($titre) && !empty($contenu) && !empty($prix) && !empty($id_categorie)) {
   
 	  // VERIFIONS SI L'ARTICLE EXISTE DEJA
 	  $reqSelect = $bdd->prepare('SELECT count(*) as count FROM produits WHERE titre = ?');
@@ -36,9 +36,9 @@ if (isset($_POST['ok'])) {
 			  move_uploaded_file($_FILES['image']['tmp_name'], 'upload/' . basename($_FILES['image']['name']));
 			  $filename = 'upload/' . basename($_FILES['image']['name']);
   
-			  $sql = "INSERT INTO produits(image,titre, contenu,prix,categorie,date_publication) VALUES (?,?,?,?,?,now())";
+			  $sql = "INSERT INTO produits(image,titre, contenu,prix,id_categorie,date_publication) VALUES (?,?,?,?,?,now())";
 			  $req = $bdd->prepare($sql);
-			  $req->execute(array($filename,$titre, $contenu, $prix,$categorie));
+			  $req->execute(array($filename,$titre, $contenu, $prix,$id_categorie));
 			  echo ' Article publié !';
 			} else {
 			  echo 'Le ficher n\'est pas de type image : jpg, jpeg et png.';
