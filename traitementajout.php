@@ -12,7 +12,6 @@ if (isset($_POST['ok'])) {
 	$contenu = htmlspecialchars($_POST['contenu']);
 	$prix = htmlspecialchars($_POST['prix']);
 	$id_categorie = htmlspecialchars($_POST['id_categorie']);
-	
   
 	if (!empty($titre) && !empty($contenu) && !empty($prix) && !empty($id_categorie)) {
   

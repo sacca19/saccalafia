@@ -15,7 +15,7 @@
     </header>       
 
 <body>
-    <div class="form">
+    <div class="formauth">
     <h1>INSCRIPTION</h1>
    
     <br><br><br>
