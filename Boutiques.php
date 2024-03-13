@@ -22,9 +22,9 @@ include('includes/auth.php');
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
-                <form>
-                    <div>
-                        <input class="form2" type="text" id="name" placeholder="search products...">
+                <form action="Boutiques.php" method="get">
+                    <div >
+                        <input class="form2" type="text" id="name" placeholder="Rechercher...">
                         <a href="#">
                             <i class="fa-solid fa-magnifying-glass" style="font-size: 17px;background-color: rgb(8, 183, 8); margin-left: 10px; padding: 14px; color: white;"></i>
                         </a>

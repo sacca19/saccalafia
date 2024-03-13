@@ -13,9 +13,6 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Document</title>
-</head>
-
-<body>
     <p>Bonjour<?php
                 if (!isset($_SESSION['id'])) {
                     echo ' vous êtes  hors connexion';
@@ -24,13 +21,17 @@ session_start();
                 } ?>
 
     </p>
-    <header class="index_header">
+</head>
 
-        <?php
-        include('includes/header.php');
-        ?>
+<header class="index_header">
 
-    </header>
+<?php
+include('includes/header.php');
+?>
+ 
+</header>
+<body>
+   
     <div class="produits">
         <?php
         $reqData = $bdd->prepare('SELECT * FROM produits');
@@ -40,12 +41,12 @@ session_start();
 
         while ($resultat = $reqData->fetch()) {
             // Vérifie si le nombre d'éléments affichés est inférieur à 15
-            if ($count < 20) {
+            if ($count < 40) {
         ?>
                 <div class="produit">
                     <a href="detail.php?id=<?= $resultat['id'] ?>"><img src="<?= $resultat['image'] ?>" alt=""></a> <br>
-                    <p><?= $resultat['categorie'] ?></p><br>
-                    <a href="detail.php?id=<?= $resultat['id'] ?>"><?= $resultat['titre'] ?></a><br>
+                    <p><?= $resultat['contenu'] ?></p>
+                    <a href="detail.php?id=<?= $resultat['id'] ?>"><?= $resultat['titre'] ?></a>
                     <span><?= $resultat['prix'] ?></span>
                 </div>
         <?php
@@ -83,7 +84,7 @@ session_start();
         </div>
     </section>
     <section class="section3">
-        <div>
+        <div class="section3_div">
 
             <h3>Give the Gift of a Post card</h3>
             <pre>Give the gift of a lasting memory with a postcard</pre>
