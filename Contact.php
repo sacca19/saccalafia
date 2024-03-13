@@ -13,15 +13,16 @@
         include ('includes/header.php');
     ?>
         <div class="container">
-            <h1 class="product-title">CONTACT US</h1>
+            <h1 class="product-title3">CONTACTEZ</h1>
+            <h1 class="product-title2"> NOUS</h1>
                   
         </div>
     </header>
     <section  class="formulaire3">
         <div class="contact_forms">
             <div  class="form-control">
-                <h2>Get In Touch</h2>
-                <form >
+                <h1 style="margin-left: 20px;">Entrer en contact</h1>
+                <form  class="formulaire_contact">
            
                     <div>
                         <input class="form3" type="text" id="name" placeholder="Fullname">
@@ -38,21 +39,21 @@
                 <form>
                     <textarea id="story" name="story" rows="5" cols="33"  values= "Message">
                     </textarea>
-                    <div class="btn-btn"><input  class="button"type="submit" value="SEND NOW"></div>
+                    <div class="btn-btn"><input  class="button"type="submit" value="Envoyer"></div>
                      
                 </form>
                
              </div>
             <div>
             
-            <h1>Talc To Us</h1>
+            <h1>Parlez-nous</h1>
             <div class="email"> 
                         <div class="EMAIL">
                         <i class="fa-regular fa-envelope" style="font-size: 20px; padding: 7px; width: 20px;height:20px;padding-top: -20px "></i>
                     </div>
                     <div class="lot1">
                         <h5>EMAIL</h5>
-                    <p class="contactp">something@tyler.com</p>
+                    <p class="contactp">something@Omnheath.com</p>
                     </div>
             </div>
             <div class="email"> 
@@ -60,8 +61,8 @@
                         <i class="fa-solid fa-phone-volume" style="font-size: 20px; padding: 7px; width: 20px;height:20px;padding-top: -20px "></i>
                     </div>
                     <div class="lot1">
-                        <h5>PHONE_NUMBER</h5>
-                        <p class="contactp">202-555-0188</p>
+                        <h5>NUMERO_TELEPHONE</h5>
+                        <p class="contactp">52 65 87 12</p>
                     </div>
             </div>
             <div class="email"> 
@@ -69,9 +70,9 @@
                 <i class="fa-solid fa-location-dot" style="font-size: 20px; padding: 7px; width: 20px;height:20px;padding-top: -20px "></i>
             </div>
             <div class="lot1">
-                <h5>ADRESS</h5>
-                <p class="contactp">2727_Ocean_road,</p>
-                <P>malibu,CA,90264</P>
+                <h5>ADRESSE</h5>
+                <p class="contactp">BENIN</p>
+                <P>Parakou</P>
             </div>
     </div>
             <div class="groupe1">

@@ -26,11 +26,13 @@ session_start();
 </head>
 
 <header class="index_header">
-
 <?php
 include('includes/header.php');
 ?>
- 
+  <div class="container">
+            <h1 class="product-title1">MAGASIN </h1>
+            <h1 class="product-title1">POLYVALENT</h1>
+        </div>
 </header>
 <body>
    
@@ -40,7 +42,6 @@ include('includes/header.php');
         $reqData->execute();
 
         $count = 0; // Variable de comptage initialisée à zéro
-
         while ($resultat = $reqData->fetch()) {
             // Vérifie si le nombre d'éléments affichés est inférieur à 15
             if ($count < 40) {
@@ -71,9 +72,10 @@ include('includes/header.php');
                             while($resultat = $reqData->fetch()){
                                 ?>
                             <div class="commentaire">
-                            <p><?= $resultat['commentaire']?></p>
+                            <img class="cotes" src="assets/img/Côte.png" alt="Description de l'image">
+                            <p><?= $resultat['commentaire']?></p><br>
                             <a href="index.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
-                            <p><?= $resultat['nom']?></p>
+                            <p style="font-size:14px;"><strong><?= $resultat['nom']?></strong></p>
                             </div>                        
                         <?php
                         }
@@ -85,7 +87,7 @@ include('includes/header.php');
 
             <h3>Offrez le cadeau d'une tenue locale </h3>
             <pre>Offrez le cadeau d'un souvenir durable avec une tenue locale.</pre>
-            <button class="btn_about">Achetez une tenue.</button>
+            <button class="btn_about">Achetez</button>
         </div>
     </section>
     <section>

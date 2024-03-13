@@ -19,10 +19,6 @@ if (isset($_POST['ok'])) {
 	  $reqSelect = $bdd->prepare('SELECT count(*) as count FROM produits WHERE titre = ?');
 	  $reqSelect->execute(array($titre));
 	  $resultat = $reqSelect->fetch();
-  
-	  if ($resultat['count'] > 0) {
-		echo "L'article entrer existe déjà.";
-	  } else {
 		if (isset($_FILES['image']) and $_FILES['image']['error'] == 0) {
 		  // verifion la taille du fichier à 2mo
 		  if ($_FILES['image']['size'] <= 2000000) {
@@ -48,7 +44,6 @@ if (isset($_POST['ok'])) {
 		} else {
 		  echo 'Impossible d\'ajouter le fichier.';
 		}
-	  }
   
 	} else {
 	  echo "Remplissez tout les champs.";

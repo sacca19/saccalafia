@@ -1,10 +1,18 @@
 <?php
 include('includes/auth.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+// Récupérer la requête de recherche
+if(isset($_GET['query'])) {
+    $query = $_GET['query'];
+    // Insérer ici la logique pour trier les résultats en fonction de la recherche
+    echo "Résultats de recherche pour : " . $query;
+} else {
+    echo "Veuillez saisir une requête de recherche.";
+}
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,9 +30,11 @@ include('includes/auth.php');
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
+           
+
                 <form action="Boutiques.php" method="get">
                     <div >
-                        <input class="form2" type="text" id="name" placeholder="Rechercher...">
+                        <input class="form2" type="text" id="name" placeholder="Rechercher un produit...">
                         <a href="#">
                             <i class="fa-solid fa-magnifying-glass" style="font-size: 17px;background-color: rgb(8, 183, 8); margin-left: 10px; padding: 14px; color: white;"></i>
                         </a>
