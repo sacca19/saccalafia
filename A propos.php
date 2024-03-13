@@ -14,10 +14,11 @@ session_start();
 </head>
 <body>
 <header class="about_header">
-        
+   <nav class="navigation">
     <?php 
         include ('includes/header.php');
     ?>
+    </nav>
         <div class="container">
             <h1 class="product-title3">QUI SOMME </h1>
             <h1 class="product-title2"> NOUS ?</h1>

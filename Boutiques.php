@@ -3,16 +3,6 @@ include('includes/auth.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-// Récupérer la requête de recherche
-if(isset($_GET['query'])) {
-    $query = $_GET['query'];
-    // Insérer ici la logique pour trier les résultats en fonction de la recherche
-    echo "Résultats de recherche pour : " . $query;
-} else {
-    echo "Veuillez saisir une requête de recherche.";
-}
-?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,18 +10,17 @@ if(isset($_GET['query'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-
-<body>
-    <header class="shop_header">
+<header class="shop_header">
+<nav class="navigation_shop">
         <?php
         include('includes/header.php');
         ?>
+</nav>
     </header>
+<body>
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
-           
-
                 <form action="Boutiques.php" method="get">
                     <div >
                         <input class="form2" type="text" id="name" placeholder="Rechercher un produit...">
@@ -68,7 +57,6 @@ if(isset($_GET['query'])) {
                     </div>
                     <p style="color: rgb(30, 148, 30); margin-left: 50px;font-size: 50px;">Shop</p>
                     <div class="paragraph">
-                        <p style="font-size: 12px; margin-left: 50px; color: gray;">Shawing all 12 result</p>
                         <select class="form-select" aria-label="Default select example" style="margin-left: 55px; border: none;">
                             <option selected>Default sorting</option>
                             <option value="1">Default sorting</option>
@@ -103,11 +91,9 @@ if(isset($_GET['query'])) {
 
             </div>
         </div>
-    </section>
-
-    <?php
+    </section>  
+</body>
+<?php
     include('includes/footer.php');
     ?>
-</body>
-
 </html>

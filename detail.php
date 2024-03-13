@@ -19,13 +19,15 @@
 
     <title>Document</title>
 </head>
-
+<header class="shop_header">
+<nav class="navigation_shop">   
+        <?php 
+            include ('includes/header.php');
+        ?>
+</nav>
+        </header>
 <body class="bodypost">
-    <header class="postcard_header">
-        
-    <?php 
-        include ('includes/header.php');
-    ?>
+   
             <section class="post_section">
                 <div class="contenu10">
                     <img class="imagepost" src="<?=$resultat['image'] ?>" alt="">
@@ -37,7 +39,7 @@
                                 <p >Postercardv1</p>
                             </div>
                         </div>
-                        <a class="a2p" href="categorieproduit.php"><?=$resultat['categorie'] ?></a>
+                        <a class="a2p" href="categorieproduit.php"><?=$resultat['id_categorie'] ?></a>
                         <p style="color: black;"><?=$resultat['titre'] ?></p>
                         <p style="color: rgb(60,71,71 ); font-size:30px;"><?=$resultat['prix'] ?> Fcfa</p>
                         <p style="color:rgb(60, 57, 57);"><?=$resultat['contenu'] ?></p>

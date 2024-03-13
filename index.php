@@ -26,9 +26,11 @@ session_start();
 </head>
 
 <header class="index_header">
+<nav class="navigation">
 <?php
 include('includes/header.php');
 ?>
+</nav>
   <div class="container">
             <h1 class="product-title1">MAGASIN </h1>
             <h1 class="product-title1">POLYVALENT</h1>

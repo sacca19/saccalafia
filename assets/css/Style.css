@@ -199,15 +199,15 @@ pre{
  .footer{
     display: flex;
     margin-bottom: 50px;
-    margin-left: 250px;
-    gap: 50px;
+    margin-left: 200px;
+    gap: 55px;
     padding: 0px;
 
  }
  .menu2{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 26px;
    font-size: 20px;
 }
 .menu2 a{
@@ -580,16 +580,50 @@ h5{
  /* fin de style pour contact
  /*style pour shop*/
  
-.navigation_postcard{
+ .shop_header{
+    width:100%;
+    height: auto;
+ }
+.navigation_shop{
    align-items: center;
     gap: 5px;
-    flex-shrink: 0;
    margin-right: 50px;
    padding: 10px;
     height: 50px;
     display: flex;
     font-size: small;
-    border-bottom: solid 1px rgb(214, 211, 211);
+    padding-bottom: 20px;
+    .menu{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-left: 500px;
+        font-size: 20px;
+    }
+    .menu a{
+        text-decoration: none;
+        color:rgb(22, 21, 21);
+       
+    }
+    .menu a:hover{
+        
+        color:rgb(5, 69, 5);
+    }
+    
+    .logo{
+        margin-left: 100px;
+        text-decoration: none;
+        color:rgb(17, 17, 17);
+        font-size: 20px;
+        padding: 20px; 
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+      
+    }
+    .logo:hover{
+        color: rgb(5, 69, 5);
+    }
+
 }
 .paragraph{
     display: flex;
