@@ -70,8 +70,9 @@ include('includes/header.php');
           <?php
                             $reqData = $bdd->prepare('SELECT * FROM avis');
                             $reqData->execute();
-                            
+                            $count = 0; 
                             while($resultat = $reqData->fetch()){
+                                if ($count < 3) {
                                 ?>
                             <div class="commentaire">
                             <img class="cotes" src="assets/img/Côte.png" alt="Description de l'image">
@@ -80,7 +81,11 @@ include('includes/header.php');
                             <p style="font-size:14px;"><strong><?= $resultat['nom']?></strong></p>
                             </div>                        
                         <?php
+                         $count++;
+                        } else {
+                            break;
                         }
+                    }
                     ?>
     </div>  
     </section>

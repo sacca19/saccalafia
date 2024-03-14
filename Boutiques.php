@@ -3,26 +3,30 @@ include('includes/auth.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="cart.js"></script>
     <title>Document</title>
 </head>
 <header class="shop_header">
-<nav class="navigation_shop">
+    <nav class="navigation_shop">
         <?php
         include('includes/header.php');
         ?>
-</nav>
-    </header>
+    </nav>
+</header>
+
 <body>
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
                 <form action="Boutiques.php" method="get">
-                    <div >
+                    <div>
                         <input class="form2" type="text" id="name" placeholder="Rechercher un produit...">
                         <a href="#">
                             <i class="fa-solid fa-magnifying-glass" style="font-size: 17px;background-color: rgb(8, 183, 8); margin-left: 10px; padding: 14px; color: white;"></i>
@@ -76,7 +80,34 @@ include('includes/auth.php');
 
                         while ($resultat = $reqData->fetch()) {
                         ?>
-                            <div class="produit">
+                            <div class="panier">
+                                <div id="cart-icon">Panier (0)
+                                    <?php
+                                    session_start();
+
+                                    // Ajouter un produit au panier
+                                    if (isset($_POST['add_to_cart'])) {
+                                        addToCart($_POST['produits_id']);
+                                    }
+
+                                    function addToCart($produitId)
+                                    {
+                                        if (!isset($_SESSION['cart'])) {
+                                            $_SESSION['cart'] = array();
+                                        }
+
+                                        // Votre logique d'ajout au panier ici
+
+                                        // Exemple simple pour ajouter un produit
+                                        if (!isset($_SESSION['cart'][$produitId])) {
+                                            $_SESSION['cart'][$produitId] = 1;
+                                        } else {
+                                            $_SESSION['cart'][$produitId]++;
+                                        }
+                                    }
+                                    ?>
+
+                                </div>
                                 <a href="detail.php?id=<?= $resultat['id'] ?>"><img src="<?= $resultat['image'] ?>" alt=""></a>
                                 <p><?= $resultat['contenu'] ?></p>
                                 <a href="detail.php?id=<?= $resultat['id'] ?>"><?= $resultat['titre'] ?></a>
@@ -91,9 +122,10 @@ include('includes/auth.php');
 
             </div>
         </div>
-    </section>  
+    </section>
 </body>
 <?php
-    include('includes/footer.php');
-    ?>
+include('includes/footer.php');
+?>
+
 </html>

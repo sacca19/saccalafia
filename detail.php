@@ -39,7 +39,17 @@
                                 <p >Postercardv1</p>
                             </div>
                         </div>
-                        <a class="a2p" href="categorieproduit.php"><?=$resultat['id_categorie'] ?></a>
+                        <?php
+                    $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
+                    $reqData->execute();
+
+                    while ($datacat = $reqData->fetch()) {
+                    ?>
+                        <a href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?><?= $datacat['count'] ?></a>
+                    <?php
+
+                    }
+                    ?>
                         <p style="color: black;"><?=$resultat['titre'] ?></p>
                         <p style="color: rgb(60,71,71 ); font-size:30px;"><?=$resultat['prix'] ?> Fcfa</p>
                         <p style="color:rgb(60, 57, 57);"><?=$resultat['contenu'] ?></p>
