@@ -97,8 +97,12 @@ include('includes/auth.php');
         </div>
     </section>
 </body>
-<?php
-include('includes/footer.php');
-?>
+<footer>
+<nav class="footer">
+    <?php 
+        include ('includes/footer.php');
+    ?>
+</nav>
+</footer>
 
 </html>

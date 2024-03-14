@@ -10,13 +10,14 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header class="shop_header">
-    <?php 
+<header class="Auth_header">
+<nav class="navigation_shop">
+        <?php 
         include ('includes/header.php');
     ?>
-    </header>
-
+    </nav> 
+</header>
+    
 <body>
     
 <div class="form">
@@ -41,9 +42,6 @@
             </div>
     </form>
 </div>
-<?php 
-        include ('includes/footer.php');
-    ?>
 </body>
 
 </html>

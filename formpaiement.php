@@ -15,7 +15,6 @@ include ('includes/auth.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<body class="formulaire">
 <h1>Bienvenue<?php
                 if(!isset($_SESSION['id'])){
                 echo' vous êtes  hors connexion';
@@ -24,11 +23,14 @@ include ('includes/auth.php');
                 } ?>
        
 </h1>
-<header class="Auth_header">
-             
+header class="Auth_header">
+<nav class="navigation_shop">
         <?php 
         include ('includes/header.php');
     ?>
+    </nav> 
+</header>
+<body class="formulaire">
 
 <div class="form">
 
@@ -84,8 +86,10 @@ include ('includes/auth.php');
     </form>
 
 </div>
-<?php 
+</body>
+<nav class="footer">
+    <?php 
         include ('includes/footer.php');
     ?>
-</body>
+</nav>
 </html>

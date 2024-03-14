@@ -152,7 +152,9 @@
             </section>
         
 </body>
-<?php
-            include('includes/footer.php');
-            ?>
+<nav class="footer">
+    <?php 
+        include ('includes/footer.php');
+    ?>
+</nav>
 </html>

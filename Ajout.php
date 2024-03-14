@@ -14,15 +14,15 @@ ini_set("display_errors", 1);
 
     <title>Document</title>
 </head>
-
-<body>
-    <header class="shop_header">
+<header class="shop_header">
+<nav class="navigation_shop">
     <?php 
         include ('includes/header.php');
     ?>
     </header>
+    </nav>
 <body>
-    
+   
     <div class="title">
     <h1>Ajout articles</h1>
     </div>
@@ -68,11 +68,13 @@ ini_set("display_errors", 1);
 
     </div>
     
-    <footer>
-    
+   
+</body>
+<footer>
+<nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-</body>
-
+</nav>
+</footer>
 </html>

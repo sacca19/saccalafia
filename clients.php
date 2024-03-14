@@ -11,11 +11,12 @@ session_start();
     
     <title>Document</title>
 </head>
-<header class="shop_header">
-             
+<header class="Auth_header">
+<nav class="navigation_shop">
         <?php 
         include ('includes/header.php');
     ?>
+    </nav> 
 </header>
 <body>
     <div class="form">
@@ -29,8 +30,12 @@ session_start();
         <input type="submit" value="Envoyer">
     </form>
     </div>
+    
+</body>
+<footer>
+<nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-</body>
-</html>
+</nav>
+</footer>

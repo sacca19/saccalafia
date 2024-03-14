@@ -140,7 +140,9 @@ include('includes/header.php');
     <br><br><br>
     
 </body>
-<?php
-    include('includes/footer.php');
+<nav class="footer">
+    <?php 
+        include ('includes/footer.php');
     ?>
+</nav>
 </html>

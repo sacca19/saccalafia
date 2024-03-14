@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<body>
 <header class="contact_header">
 <?php 
         include ('includes/header.php');
@@ -18,6 +17,7 @@
                   
         </div>
     </header>
+<body>
     <section  class="formulaire3">
         <div class="contact_forms">
             <div  class="form-control">
@@ -100,9 +100,11 @@
         </div>
         
     </section> 
+    
+    </body>
+    <nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-        </div>
-          
-    </body>
+   </nav>
+    </html>

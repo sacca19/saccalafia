@@ -45,9 +45,12 @@ session_start();
         </div>
      </section>
  <br><br><br>
- <footer>
+ 
+</body>
+<footer>
+<nav class="footer">
  <?php 
         include ('includes/footer.php');
     ?>
-</body>
+</nav>
 </html>

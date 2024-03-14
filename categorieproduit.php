@@ -21,12 +21,14 @@ include('includes/auth.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<body>
 <header class="shop_header">
-<?php 
-        include ('includes/header.php');
-    ?>
-    </header>       
+    <nav class="navigation_shop">
+        <?php
+        include('includes/header.php');
+        ?>
+    </nav>
+</header>
+<body>       
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
@@ -103,8 +105,12 @@ include('includes/auth.php');
         </div>
     </section>
     
+    </body>
+    <footer>
+<nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-    </body>
+</nav>
+</footer>
     </html>

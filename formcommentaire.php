@@ -14,11 +14,13 @@ ini_set("display_errors", 1);
 
     <title>Document</title>
 </head>
-<header class="shop_header">
-    <?php 
+<header class="Auth_header">
+<nav class="navigation_shop">
+        <?php 
         include ('includes/header.php');
     ?>
-    </header>
+    </nav> 
+</header>
 <body>
   
 <body>
@@ -51,7 +53,9 @@ ini_set("display_errors", 1);
     
    
 </body>
-<?php 
+<nav class="footer">
+    <?php 
         include ('includes/footer.php');
     ?>
+</nav>
 </html>

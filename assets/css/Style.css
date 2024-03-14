@@ -367,8 +367,41 @@ color: rgb(36, 35, 35);
     color: gray;
 }
 .navigation_post{
+    align-items: center;
+     gap: 25px;
+     padding: 10px;
+     height: 150px;
+     display: flex;
+ }
+ .menu{
+     display: flex;
+     align-items: center;
+     gap: 30px;
+     margin-left: 400px;
+     font-size: 20px;
+ }
+ .menu a{
+     text-decoration: none;
+     color:black;
     
-}
+ }
+ .menu a:hover{
+     
+     color:rgb(5, 69, 5);
+ }
+ 
+ .logo{
+     margin-left: 100px;
+     text-decoration: none;
+     color:rgb(17, 17, 17);
+     font-size: 20px;
+     padding: 20px; 
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     margin-left: 400px;
+ }
+ .logo:hover{
+     color: rgb(5, 69, 5);
+ }
 
  /*fin de style de les poscards*/
  /*style pour about*/

@@ -8,12 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-<header class="shop_header">
+<header class="Auth_header">
+<nav class="navigation_shop">
         <?php 
         include ('includes/header.php');
-        ?>
-    </header>       
-
+    ?>
+    </nav> 
+</header>
 <body>
     <div class="formauth">
     <h1>INSCRIPTION</h1>
@@ -60,9 +61,10 @@
         </div>
     </form>
     </div>
+</body>       
+<nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-</body>       
-   
+</nav>
 </html>
