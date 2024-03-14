@@ -1,5 +1,5 @@
 
-<a class="logo"style="color:white;" href="Connexion.php"> Connexion</a>
+<a class="logo" href="Connexion.php"> Connexion</a>
     <div class="menu">
         <a href="index.php">ACCUEIL</a>
         <a href="A propos.php">A PROPOS</a>

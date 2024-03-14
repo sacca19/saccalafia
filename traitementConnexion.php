@@ -25,7 +25,7 @@
           $_SESSION['nom'] = $resultat['nom'];
           $_SESSION['id'] = $resultat['id'];
 
-          header('LOCATION: tableaudebord.php');
+          header('LOCATION: index.php');
           exit;
             }else{
             echo 'Mot de passe  incorrect !';

@@ -20,12 +20,12 @@
     <title>Document</title>
 </head>
 <header class="shop_header">
-<nav class="navigation_shop">   
+<nav class="navigation_post">   
         <?php 
             include ('includes/header.php');
         ?>
 </nav>
-        </header>
+</header>
 <body class="bodypost">
    
             <section class="post_section">
@@ -34,9 +34,29 @@
                     <div>
                         <div class="menu1">
                             <a class="a1p" href="index.php">HOME /</a>
-                            <a class="a1p" href="Postcards.php">Postcard /</a>
+                            <?php
+                    $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
+                    $reqData->execute();
+
+                    while ($datacat = $reqData->fetch()) {
+                    ?>
+                        <a  class="a1p" href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?>/</a>
+                    <?php
+
+                    }
+                    ?>
                             <div style="margin-top: -20px; font-size:20px; color: gray;">
-                                <p >Postercardv1</p>
+                               <?php
+                    $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
+                    $reqData->execute();
+
+                    while ($datacat = $reqData->fetch()) {
+                    ?>
+                      <p><?= $datacat['nom'] ?>V<?= $datacat['id'] ?></p>
+                    <?php
+
+                    }
+                    ?>
                             </div>
                         </div>
                         <?php
@@ -45,7 +65,7 @@
 
                     while ($datacat = $reqData->fetch()) {
                     ?>
-                        <a href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?><?= $datacat['count'] ?></a>
+                        <a style="color: darkgreen;" href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?></a>
                     <?php
 
                     }
@@ -87,55 +107,40 @@
                                         mettreAJourValeur();
                                     }
                                 });
-                            </script>
+                            </script> 
                             <div class="relie">
                                 <div><p>Category:</p></div>
-                                <div class="lien"><a class="a2p" href="Postcards.php">Postcards</a></div>
+                                <div class="lien">
+                                <?php
+                    $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
+                    $reqData->execute();
 
-                            </div>
+                    while ($datacat = $reqData->fetch()) {
+                    ?>
+                        <a  class="a4p" href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?></a>
+                    <?php
+
+                    }
+                    ?>
+                </div>
+                </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="section2post">
-                <div class=" lien1">
-                    <a class="a3p" href="detail.php">Description</a>
-                    <a class="a3p" href="Reviews.php">Reviews(0)</a>
-                </div>
-                <div class="lot1post">
-                    <p>Paper Type: Matte</p>
-                    <ul>
-                        <li>17.5 pt thickness / 120 lb weight / 324 GSM</li>
-                        <li>Light white, uncoated matte finish with an eggshell texture</li>
-                        <li>Paper is easy to write on and won’t smudge</li>
-                        <li>Made and printed in the USA</li>
-                    </ul>
-                </div>
-                <div style="margin-top: 50px;">
-                    <p>Paper Type: Semi-Gloss</p>
-                    <ul>
-                        <li>12.5 pt thickness / 110 lb weight</li>
-                        <li>Bright white, semi-gloss finish</li>
-                        <li>50% recycled content</li>
-                        <li>FSC certified</li>
-                        <li>Paper imported from Italy; printed in the USA</li>
-                    </ul>
-                    <p style="font-size: 17px; margin-top: 20px;"><strong>Note</strong> :There may be a slight difference in actual color, due to the colors of display.</p>
-                </div>
-            </section>
             <section class="section3post">
-                <h1 style="margin-left: 18px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
-                <div class="produits">
+                <h1 style="margin-left: 300px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
+                <div class="produitsde">
                     <?php
                             $reqData = $bdd->prepare('SELECT * FROM produits');
                             $reqData->execute();
                             
                             while($resultat = $reqData->fetch()){
                                 ?>
-                            <div class="produit">
+                            <div class="produitde">
                             <a href="detail.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
                             <p><?= $resultat['contenu']?></p>
-                            <a href="detail.php?id=<?= $resultat['id']?>"><?= $resultat['titre']?></a>
+                            <a href="detail.php?id=<?= $resultat['id']?>"><?= $resultat['titre']?></a><br>
                             <span><?= $resultat['prix']?></span>
                             
                         </div>
@@ -145,11 +150,9 @@
                     </div>
 
             </section>
-       
-            <?php
-            include('includes/footer.php');
-            ?>
         
 </body>
-
+<?php
+            include('includes/footer.php');
+            ?>
 </html>

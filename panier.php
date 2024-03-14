@@ -2,7 +2,7 @@
 session_start();
 
 // Ajouter un produit au panier
-if(isset($_POST['add_to_cart'])) {
+/*if(isset($_POST['add_to_cart'])) {
     addToCart($_POST['produits_id']);
 }
 
@@ -21,3 +21,5 @@ function addToCart($produitId) {
     }
 }
 ?>
+ */
+                                    
