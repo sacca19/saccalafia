@@ -43,5 +43,9 @@
     </form>
 </div>
 </body>
-
+<footer>
+<?php 
+        include ('includes/header.php');
+    ?>
+</footer>
 </html>

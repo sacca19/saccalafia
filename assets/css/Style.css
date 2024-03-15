@@ -1,60 +1,62 @@
 /*style pour index*/
 body{
     color: rgb(49, 48, 48);
+  
 }
-.index_header{
+
+header.index_header{
     background-image: url(../img/imf25.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     width:1850px;
     height: 800px;
     
+
 }
 
-.navigation{
-   align-items: center;
-    gap: 20px;
-    padding: 10px;
-    height: 150px;
+.navigationindex{
+    padding: 0px;
+    width: 100%;
     display: flex;
-}
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-left: 650px;
+    margin-left: 100px;
+    height: auto;
+    width: 100px;
+    .menu1{
     font-size: 20px;
-}
-.menu a{
-    text-decoration: none;
-    color:white;
-   
-}
-.menu a:hover{
-    
-    color:rgb(5, 69, 5);
-}
+    margin-left: 800px;
+    padding: 50px;
 
-.logo{
-    margin-left: 100px;
-    text-decoration: none;
-    color:rgb(17, 17, 17);
-    font-size: 20px;
-    padding: 20px; 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-right: 100px;
-    margin-left: 100px;
-}
-.logo:hover{
-    color: rgb(5, 69, 5);
+    }
+    .menu1 a{
+        text-decoration: none;
+        color:white;
+        font-weight: bolder;
+        margin-left: 50px;
+       
+    }
+    .menu1 a:hover{
+        color:rgb(5, 69, 5);
+    }
+    .logo2{
+        margin-left: 10px;
+        text-decoration: none;
+        color:white;
+        font-size: 25px;
+        padding-top: 50px; 
+        margin-right: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+       
+    }
 }
 .product-title1{
     color:rgb(248, 235, 235);  
     font-size: 100px; 
-    margin-left: 130px;
+    margin-left: 150px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 150px;
 }
+
 .product-title3{
     color:rgb(248, 235, 235);  
     font-size: 100px; 
@@ -122,13 +124,15 @@ pre{
     padding: 10%;
     height: 150px;
     border-bottom: solid 1px rgb(252, 231, 231);
+    
 }
 .section3_div{
     width: 100%;
 }
 .imagepost{
     width: 400px;
-    height: 400px;   
+    height: 400px;
+    margin-left: 200px;   
 }
 
 
@@ -196,18 +200,29 @@ pre{
 
 }
 
- .footer{
+ 
+ footer{
+   border-top: solid 1px rgb(212, 208, 208);
+   .footerindex{
     display: flex;
     margin-bottom: 50px;
     margin-left: 200px;
     gap: 55px;
     padding: 0px;
-
+    padding-top: 15px;
+ }
+   .footer{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    gap: 55px;
+    padding: 0px;
+    padding-top: 15px;
  }
  .menu2{
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 25px;
    font-size: 20px;
 }
 .menu2 a{
@@ -219,6 +234,9 @@ pre{
     
     color:rgb(13, 115, 13);
 }
+
+ }
+ 
  /*fin de style pour index*/
  /*style pour les postcards*/
  .menu1{
@@ -230,12 +248,14 @@ pre{
     width: 300px;
     height: 400px;   
 }
+.post_section{
+    padding-top: 100px;
+}
 .contenu10{
 display: flex;
 gap: 60px;
 margin-left: 100px;
 padding-top: 70px;
-padding-bottom: 50px;
 height: 550px;
 width: 1500px;
 font-size: 20px;
@@ -283,6 +303,7 @@ background-color: rgb(6, 143, 6);
     padding-top: -20px;
 }
 .searchs1{
+
     display: flex;
     text-align: left;
     color: black;
@@ -332,10 +353,7 @@ font-size: xx-large;
     padding-top: 22px;
     margin-left: 5px;
 }
-.bodypost{
-margin-left: 200px;
-color: rgb(36, 35, 35);
-}
+
 .produitsde {
     display: flex;
     flex-wrap: wrap;
@@ -349,7 +367,8 @@ color: rgb(36, 35, 35);
 .produitde {
     width: calc(33.33% -10px);
     margin-bottom: 20px;
-    box-sizing: border-box;   
+    box-sizing: border-box;  
+    margin: 1%; 
 }
 
 .produitde img {
@@ -366,42 +385,7 @@ color: rgb(36, 35, 35);
     margin: 0;
     color: gray;
 }
-.navigation_post{
-    align-items: center;
-     gap: 25px;
-     padding: 10px;
-     height: 150px;
-     display: flex;
- }
- .menu{
-     display: flex;
-     align-items: center;
-     gap: 30px;
-     margin-left: 400px;
-     font-size: 20px;
- }
- .menu a{
-     text-decoration: none;
-     color:black;
-    
- }
- .menu a:hover{
-     
-     color:rgb(5, 69, 5);
- }
- 
- .logo{
-     margin-left: 100px;
-     text-decoration: none;
-     color:rgb(17, 17, 17);
-     font-size: 20px;
-     padding: 20px; 
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     margin-left: 400px;
- }
- .logo:hover{
-     color: rgb(5, 69, 5);
- }
+
 
  /*fin de style de les poscards*/
  /*style pour about*/
@@ -418,6 +402,44 @@ color: rgb(36, 35, 35);
     width:1850px;
     height: 800px;
     
+}
+.navigation{
+    display: flex;
+    width: 100%;
+    margin-left: 100px;
+    height: auto;
+    width: 100px;
+    font-weight: bolder;
+
+    .menu{
+    font-size: 20px;
+    margin-left: 550px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    padding-top: 60px;
+    }
+    .menu a{
+        text-decoration: none;
+        color:white;
+        margin-left: 30px;
+       display: flex;
+       gap: 10px;
+    }
+    .menu a:hover{
+        color:rgb(5, 69, 5);
+    }
+    .logo{
+        margin-left: 10px;
+        text-decoration: none;
+        color:white;
+        font-size: 20px;
+        padding-top: 50px; 
+        margin-right: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+       
+    }
 }
 .about_paragraph{
     color: rgb(49, 47, 47);
@@ -616,11 +638,13 @@ h5{
    align-items: center;
     gap: 5px;
    margin-right: 50px;
-   padding: 10px;
-    height: 50px;
+    height: auto;
+    width: 100%;
     display: flex;
     font-size: small;
     padding-bottom: 20px;
+    position: fixed;
+    background-color:white;
     .menu{
         display: flex;
         align-items: center;
@@ -638,8 +662,6 @@ h5{
         color:rgb(5, 69, 5);
     }
     
-   
-
 }
 .logo{
     margin-left: 100px;
@@ -658,7 +680,9 @@ h5{
     display: flex;
     gap: 460px;
 }
-
+.recherche{
+    padding-top: 100px;
+}
 .searchs1{
     display: flex;
     text-align: left;

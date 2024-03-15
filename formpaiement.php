@@ -87,9 +87,9 @@ header class="Auth_header">
 
 </div>
 </body>
-<nav class="footer">
+<footer>
     <?php 
         include ('includes/footer.php');
     ?>
-</nav>
+</footer>
 </html>

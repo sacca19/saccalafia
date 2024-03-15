@@ -98,11 +98,10 @@ include('includes/auth.php');
     </section>
 </body>
 <footer>
-<nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-</nav>
+
 </footer>
 
 </html>

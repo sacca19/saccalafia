@@ -8,9 +8,21 @@
     <title>Document</title>
 </head>
 <header class="contact_header">
-<?php 
-        include ('includes/header.php');
-    ?>
+<nav class="navigation"><a  class="logo" href="inscription.php"><strong>CONNEXION </strong></a>  
+    <a class="logo" href="Connexion.php"><strong>DECONNEXION</strong></a>
+     <div class="menu">
+    <a href="index.php">ACCUEIL</a>
+    <a href="Contact.php">A_PROPOS</a>
+    <a href="Boutiques.php">BOUTIQUES</a>
+    <a href="formation.php">FORMATION</a>
+    <a href="#">
+    <a href="panier.php"><i class="fa-solid fa-bag-shopping" style="margin-left:-65px;font-size: 25px;margin-top: -5px;"></i></a>
+    </a>
+    <a href="#">
+        <i class="fa-solid fa-user" style="margin-left:-65px;font-size: 25px;margin-top: -5px;"></i>
+    </a>
+</nav>
+</div>
         <div class="container">
             <h1 class="product-title3">CONTACTEZ</h1>
             <h1 class="product-title2"> NOUS</h1>
@@ -102,9 +114,7 @@
     </section> 
     
     </body>
-    <nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-   </nav>
     </html>

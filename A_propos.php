@@ -12,12 +12,33 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+<p>Bonjour<?php
+                if (!isset($_SESSION['id'])) {
+                    echo ' vous êtes  hors connexion';
+                } else {
+                    echo $_SESSION['nom'];
+                   echo $_SESSION['id'];
+                } ?>
+
+    </p>
 <body>
 <header class="about_header">
    <nav class="navigation">
-    <?php 
-        include ('includes/header.php');
-    ?>
+   <a  class="logo" href="inscription.php"><strong>CONNEXION </strong></a>  
+    <a class="logo" href="Connexion.php"><strong>DECONNEXION</strong></a>
+     <div class="menu">
+     <a href="index.php">ACCUEIL</a>
+    <a href="Boutiques.php">BOUTIQUES</a>
+    <a href="Contact.php">CONTACT</a>
+    <a href="formation.php">FORMATION</a>
+    <a href="#">
+    <a href="panier.php"><i class="fa-solid fa-bag-shopping" style=" margin-left:-65px;font-size: 25px;margin-top: -5px;"></i></a>
+    </a>
+    <a href="#">
+        <i class="fa-solid fa-user" style="margin-left:-65px;font-size: 25px;margin-top: -5px;"></i>
+    </a>
+
+</div>
     </nav>
         <div class="container">
             <h1 class="product-title3">QUI SOMME </h1>
@@ -48,9 +69,7 @@ session_start();
  
 </body>
 <footer>
-<nav class="footer">
  <?php 
         include ('includes/footer.php');
     ?>
-</nav>
 </html>

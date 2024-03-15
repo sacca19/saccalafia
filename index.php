@@ -3,7 +3,7 @@ include('includes/auth.php');
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,29 +13,25 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=" assets/css/Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <title>Ofashion</title>
-    <p>Bonjour<?php
-                if (!isset($_SESSION['id'])) {
-                    echo ' vous êtes  hors connexion';
-                } else {
-                    echo $_SESSION['nom'];
-                } ?>
-
-    </p>
 </head>
 
 <header class="index_header">
-<nav class="navigation">
-<?php
-include('includes/header.php');
-?>
-</nav>
-  <div class="container">
-            <h1 class="product-title1">MAGASIN </h1>
-            <h1 class="product-title1">POLYVALENT</h1>
-        </div>
+    <nav class="navigationindex">
+    <a class="logo2" href="index.php">Ofashion</a> 
+    <div class="menu1">
+    <a  href="inscription.php">INSCRIPTION</a>
+    <a href="Connexion.php">CONNEXION</a>
+    <a href="formation.php">FORMATION</a>
+</div>
+
+    </nav>
+    <div class="container">
+        <h1 class="product-title1">MAGASIN </h1>
+        <h1 class="product-title1">POLYVALENT</h1>
+    </div>
 </header>
+
 <body>
    
     <div class="produits">
@@ -140,9 +136,23 @@ include('includes/header.php');
     <br><br><br>
     
 </body>
-<nav class="footer">
-    <?php 
-        include ('includes/footer.php');
-    ?>
-</nav>
+<footer>
+<footer>
+        <div class="postcard">
+
+            <nav class="footerindex">
+            <a class="logo2" href="index.php">Ofashion</a> 
+                <div class="menu2">
+                <a href="Boutiques.php">INSCRIPTION</a>
+                <a href="Connexion.php">CONNEXION</a> 
+                <a href="Formation.php">FORMATION</a> 
+                </div>
+                <div>
+               <a class="logo" href=""> Copyright © 2024 Ofashion magasin</a>
+                    <a  class="logo" href="Deconnexion.php"><strong>Deconnexion </strong></a>  
+                </div>
+        </nav>
+        </div>
+        </footer>
+</footer>
 </html>

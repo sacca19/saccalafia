@@ -53,9 +53,9 @@ ini_set("display_errors", 1);
     
    
 </body>
-<nav class="footer">
+<footer>
     <?php 
         include ('includes/footer.php');
     ?>
-</nav>
+</footer>
 </html>

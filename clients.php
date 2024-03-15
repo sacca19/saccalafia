@@ -33,9 +33,8 @@ session_start();
     
 </body>
 <footer>
-<nav class="footer">
     <?php 
         include ('includes/footer.php');
     ?>
-</nav>
 </footer>
+</html>
