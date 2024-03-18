@@ -23,15 +23,14 @@ include ('includes/auth.php');
                 } ?>
        
 </h1>
-header class="Auth_header">
+<body class="formulaire">
+<header class="Auth_header">
 <nav class="navigation_shop">
         <?php 
         include ('includes/header.php');
     ?>
     </nav> 
 </header>
-<body class="formulaire">
-
 <div class="form">
 
 
@@ -86,10 +85,10 @@ header class="Auth_header">
     </form>
 
 </div>
-</body>
 <footer>
     <?php 
         include ('includes/footer.php');
     ?>
 </footer>
+</body>
 </html>

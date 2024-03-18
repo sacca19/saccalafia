@@ -1,3 +1,34 @@
+<?php
+    session_start();
+    include('includes/auth.php');
+
+  if(!isset($_SESSION['status'])){ 
+    header('location: Connexion.php');
+  }
+
+if (isset($_POST['maj'])) {
+    $id= $_SESSION['id'];
+    $nom = htmlspecialchars($_POST['nom']);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $pseudo = htmlspecialchars($_POST['pseudo']);
+    $phonenumber = htmlspecialchars($_POST['phonenumber']);
+    $email = htmlspecialchars($_POST['email']);
+	$password = htmlspecialchars($_POST['passwordd']);
+    
+    if(isset($nom, $prenom, $pseudo, $phonenumber, $email, $password) ){
+
+        // VERIFIONS SI L'email que la personne à renseigner existe déjà dans la base de données
+        $passwordHash = password_hash($password,PASSWORD_DEFAULT);
+    
+        $reqData = $bdd->prepare("UPDATE users SET nom=?, prenom=?, pseudo=?, phonenumber=?, email=?, passwordd=? where id = ?");
+        $reqData->execute(array($nom,$prenom,$pseudo, $phonenumber,$email,$password, $id));
+        
+        echo "Modification réussi ! ";
+    }else{
+        echo "veuillez remplir tous les champs";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,28 +40,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
-
+<body>
 <header class="shop_header">
-    <?php
-    session_start();
-    include('includes/auth.php');
-
+<?php
     include('includes/header.php');
     ?>
 </header>
-
-<body>
-
     <section class="sectionp">
         <h4>MODIFIER</h4>
         <?php
-        $id = $_SESSION['id'];
-        $reqData = $bdd->prepare("SELECT * FROM users where id=$id");
-        $reqData->execute();
+        
+        $reqData = $bdd->prepare("SELECT * FROM users where id = ?");
+        $reqData->execute(array($_SESSION['id']));
 
         while ($resultat = $reqData->fetch()) {
         ?>
-             <form method="post" action="traitementupdateuser.php" >
+             <form method="post" >
         <label for="nom"> Nom</label>
         <br>
         <input type="text" id="nom" name="nom" value="<?= $resultat['nom']?>">
@@ -56,7 +81,7 @@
         <input type="password" id="passwordd" name="passwordd" >
         <br>
         <div class="btn6">
-            <input style="background-color:green; color:white;border-radius:9px " type="submit" value="Modifier" name="ok">
+            <input style="background-color:green; color:white;border-radius:9px " type="submit" value="Modifier" name="maj">
         </div>
 </form>
             <?php
@@ -64,11 +89,10 @@
 ?>
             </div>
     </section>
-</body>
-<footer>
+    <footer>
     <?php
     include('includes/footer.php');
     ?>
 </footer>
-
+</body>
 </html>

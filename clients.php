@@ -11,6 +11,7 @@ session_start();
     
     <title>Document</title>
 </head>
+<body>
 <header class="Auth_header">
 <nav class="navigation_shop">
         <?php 
@@ -18,7 +19,6 @@ session_start();
     ?>
     </nav> 
 </header>
-<body>
     <div class="form">
     <h2>Type de clients</h2>
     <form action="traitementclient.php" method="post">
@@ -30,11 +30,10 @@ session_start();
         <input type="submit" value="Envoyer">
     </form>
     </div>
-    
-</body>
-<footer>
+    <footer>
     <?php 
         include ('includes/footer.php');
     ?>
 </footer>
+</body>
 </html>

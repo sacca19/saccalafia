@@ -1,6 +1,6 @@
 
 <div class="menu">
-    <a href="index.php"></a>
+    <a href="index.php">ACCUEIL</a>
     <a href="A_propos.php">A_PROPOS</a>
     <a href="Boutiques.php">BOUTIQUES</a>
     <a href="Contact.php">CONTACT</a>

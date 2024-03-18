@@ -1,3 +1,6 @@
+<?php 
+        include ('includes/auth.php');
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +11,14 @@
     <title>Document</title>
 </head>
 <body>
-<header class="Auth_header">
-<nav class="navigation_shop">
-        <?php 
-        include ('includes/header.php');
-    ?>
-    </nav> 
-</header>
+<header></header>
 <body>
-    <div class="formauth">
-    <h1>INSCRIPTION</h1>
-   
-    <br><br><br>
+<h1 style="text-align: center;padding-top:30px;padding-bottom:-25px;">INSCRIPTION</h1>
+    <div class="formauth"> 
     <form method="post"action="traitementInscription.php" >
         <label for="nom"> Nom</label>
         <br>
-        <input type="text" id="nom" name="nom" >
+        <input  type="text" id="nom" name="nom" >
         <br>
         <label for="prenom">Prénom</label>
         <br>
@@ -52,6 +47,21 @@
         <label for="quartier">Quartier*</label>
         <br>
         <input type="text" id="quartier" name="quartier">
+        <br>
+        <select name="status">
+        <option selected>Choisir type d'utilisateur</option>
+        <?php
+        $reqData = $bdd->prepare('SELECT * FROM types');
+        $reqData->execute();
+
+        while ($datacat = $reqData->fetch()) {
+            ?>
+            <option><?= $datacat['nom'] ?></option>
+            <?php
+            
+        }
+        ?>
+    </select>
         <div class="btn6">
             <input style="background-color:green; color:white;border-radius:9px " type="submit" value="M'inscrire" name="ok">
         </div>
@@ -62,9 +72,4 @@
     </form>
     </div>
 </body>       
-<footer>
-    <?php 
-        include ('includes/footer.php');
-    ?>
-</footer>
 </html>

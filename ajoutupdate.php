@@ -9,10 +9,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
-
+<body>
 <header class="shop_header">
     <?php
-        session_start();
+        
         include('includes/auth.php');
         error_reporting(E_ALL);
         ini_set("display_errors", 1);
@@ -20,16 +20,13 @@
         
     ?>
 </header>
-
-<body>
-
     <section class="sectionp">
         <h4>MODIFIER</h4>
 
         <?php
-        $id = $_SESSION['id'];
-        $reqData = $bdd->prepare("SELECT * FROM produits where id=$id");
-        $reqData->execute();
+        $id = $_GET['id'];
+        $reqData = $bdd->prepare("SELECT * FROM produits where id=?");
+        $reqData->execute(array($id));
     
         while ($resultat = $reqData->fetch()) {
         ?>

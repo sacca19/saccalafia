@@ -15,7 +15,7 @@ ini_set("display_errors", 1);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Ofashion</title>
 </head>
-
+<body>
 <header class="index_header">
     <nav class="navigationindex">
     <a class="logo2" href="index.php">Ofashion</a> 
@@ -31,9 +31,6 @@ ini_set("display_errors", 1);
         <h1 class="product-title1">POLYVALENT</h1>
     </div>
 </header>
-
-<body>
-   
     <div class="produits">
         <?php
         $reqData = $bdd->prepare('SELECT * FROM produits');
@@ -134,10 +131,7 @@ ini_set("display_errors", 1);
         </div>
     </section>
     <br><br><br>
-    
-</body>
-<footer>
-<footer>
+    <footer>
         <div class="postcard">
 
             <nav class="footerindex">
@@ -154,5 +148,5 @@ ini_set("display_errors", 1);
         </nav>
         </div>
         </footer>
-</footer>
+</body>
 </html>

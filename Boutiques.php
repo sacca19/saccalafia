@@ -13,6 +13,7 @@ include('includes/auth.php');
     <script src="cart.js"></script>
     <title>Document</title>
 </head>
+<body>
 <header class="shop_header">
     <nav class="navigation_shop">
         <?php
@@ -21,7 +22,6 @@ include('includes/auth.php');
     </nav>
 </header>
 
-<body>
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
@@ -40,12 +40,16 @@ include('includes/auth.php');
                 <div class="text">
                     <h3>Categories</h3>
                     <?php
-                    $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
+                    $reqData = $bdd->prepare('SELECT *, count(*) as count,
+                    categorie.nom as catnom,
+                    categorie.id as catid
+                    FROM categorie, produits WHERE categorie.id = produits.id_categorie GROUP BY categorie.id
+                    ');
                     $reqData->execute();
 
                     while ($datacat = $reqData->fetch()) {
                     ?>
-                        <a href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?><?= $datacat['count'] ?></a>
+                        <a href="categorieproduit.php?id=<?= $datacat['catid'] ?>"><?= $datacat['catnom'] ?> (<?= $datacat['count'] ?>)</a><br>
                     <?php
 
                     }
@@ -96,12 +100,11 @@ include('includes/auth.php');
             </div>
         </div>
     </section>
-</body>
-<footer>
+    <footer>
     <?php 
         include ('includes/footer.php');
     ?>
 
 </footer>
-
+</body>
 </html>

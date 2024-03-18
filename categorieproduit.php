@@ -21,14 +21,14 @@ include('includes/auth.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+<body>  
 <header class="shop_header">
     <nav class="navigation_shop">
         <?php
         include('includes/header.php');
         ?>
     </nav>
-</header>
-<body>       
+</header>     
     <section class="recherche">
         <div class="searchs1">
             <div class="search1">
@@ -47,16 +47,20 @@ include('includes/auth.php');
                 <div class="text">
                     <h3>Categories</h3>
                     <?php
-        $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
-        $reqData->execute();
+                    $reqData = $bdd->prepare('SELECT *, count(*) as count,
+                    categorie.nom as catnom,
+                    categorie.id as catid
+                    FROM categorie, produits WHERE categorie.id = produits.id_categorie GROUP BY categorie.id
+                    ');
+                    $reqData->execute();
 
-        while ($datacat = $reqData->fetch()) {
-            ?>
-            <a href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?><?= $datacat['count'] ?></a>
-            <?php
-            
-        }
-        ?>
+                    while ($datacat = $reqData->fetch()) {
+                    ?>
+                        <a href="categorieproduit.php?id=<?= $datacat['catid'] ?>"><?= $datacat['catnom'] ?> (<?= $datacat['count'] ?>)</a><br>
+                    <?php
+
+                    }
+                    ?>
                 </div>
               
             </div>
@@ -83,8 +87,8 @@ include('includes/auth.php');
                     
                     <div class="produits">
                     <?php
-                            $reqData = $bdd->prepare('SELECT * FROM produits');
-                            $reqData->execute();
+                            $reqData = $bdd->prepare('SELECT * FROM produits WHERE id_categorie = ?');
+                            $reqData->execute(array($_GET['id']));
                             
                             while($resultat = $reqData->fetch()){
                                 ?>
@@ -104,11 +108,10 @@ include('includes/auth.php');
             </div>
         </div>
     </section>
-    
-    </body>
     <footer>
     <?php 
         include ('includes/footer.php');
     ?>
 </footer>
+    </body>
     </html>

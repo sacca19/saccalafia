@@ -49,13 +49,12 @@ ini_set("display_errors", 1);
 
     </div>
     
-    <footer>
-    
-   
-</body>
 <footer>
     <?php 
         include ('includes/footer.php');
     ?>
 </footer>
+   
+</body>
+
 </html>

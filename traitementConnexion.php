@@ -17,13 +17,17 @@
       $reqData = $bdd->prepare('SELECT *, count(*) as count FROM users WHERE email = ?');
       $reqData->execute(array($email));
       $resultat = $reqData->fetch();
-  
+      var_dump($resultat);
       if ($resultat['count'] > 0) {  
         
         $passwordVerrify = password_verify($password,$resultat['passwordd']);
         if ($passwordVerrify) {
-          $_SESSION['nom'] = $resultat['nom'];
-          $_SESSION['id'] = $resultat['id'];
+
+            $_SESSION['status'] = $resultat['status'];
+
+            $_SESSION['nom'] = $resultat['nom'];
+            $_SESSION['id'] = $resultat['id'];
+        
 
           header('LOCATION: A_propos.php');
           exit;

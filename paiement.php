@@ -30,7 +30,7 @@
             background-color: #f5f5f5;
         }
     </style>
-
+<body>
 <header class="shop_header">
         <?php
         include('includes/auth.php');
@@ -38,8 +38,6 @@
         include('includes/header.php');
         ?>
     </header>
-<body>
-   
     <section class="sectionp">
     <h4>PAIEMENT</h4> 
     <div class="entete2">
@@ -50,7 +48,7 @@
     
     </div>
         <?php
-        $reqData = $bdd->prepare('SELECT * FROM dasbord');
+        $reqData = $bdd->prepare('SELECT * FROM paiements');
         $reqData->execute();
 
         while ($resultat = $reqData->fetch()) {
@@ -109,23 +107,9 @@
                 <script>
                     // Exemple de produits
                     const products = [
-                        <?php
-                            $reqData = $bdd->prepare('SELECT * FROM produits');
-                            $reqData->execute();
-                            
-                            while($resultat = $reqData->fetch()){
-                                ?>
-                        <div class="produit">
-                            <a href="produit.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
-                            <p><?= $resultat['contenu']?></p>
-                            <a href="produit.php?id=<?= $resultat['id']?>"><?= $resultat['titre']?></a>
-                            <span><?= $resultat['prix']?></span>
-                            
-                        </div>
-                        <?php
-                        }
-                    ?>
+                        
                     ];
+                    
 
                     // Fonction pour afficher le panier
                     function displayCart() {
@@ -164,10 +148,10 @@
         ?>
     </div>
     </section>
-</body>
-<footer>
+    <footer>
     <?php 
         include ('includes/footer.php');
     ?>
 </footer>
+</body>
 </html>

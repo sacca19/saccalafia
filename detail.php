@@ -4,7 +4,10 @@ ini_set("display_errors", 1);
 
 include('includes/auth.php');
 
-$recupData = $bdd->prepare('SELECT * FROM produits WHERE id = ?');
+$recupData = $bdd->prepare('SELECT *, count(*) as count,
+categorie.nom as catnom,
+categorie.id as catid
+FROM produits,categorie WHERE categorie.id = produits.id_categorie AND produits.id = ?');
 $recupData->execute(array($_GET['id']));
 $resultat = $recupData->fetch();
 ?>
@@ -19,6 +22,7 @@ $resultat = $recupData->fetch();
 
     <title>Document</title>
 </head>
+<body>
 <header class="shop_header">
     <nav class="navigation_shop">
         <?php
@@ -26,51 +30,20 @@ $resultat = $recupData->fetch();
         ?>
     </nav>
 </header>
-
-<body>
-
     <section class="post_section">
         <div class="contenu10">
             <img class="imagepost" src="<?= $resultat['image'] ?>" alt="">
             <div>
                 <div class="menu1">
-                    <a class="a1p" href="index.php">HOME /</a>
-                    <?php
-                    $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
-                    $reqData->execute();
-
-                    while ($datacat = $reqData->fetch()) {
-                    ?>
-                        <a class="a1p" href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?>/</a>
-                    <?php
-
-                    }
-                    ?>
+                    <a class="a1p" href="index.php">HOME / </a>
+                        <a class="a1p" href="categorieproduit.php?id=<?= $resultat['catid'] ?>"> <?= $resultat['catnom'] ?>/</a>
+            
                     <div style="margin-top: -20px; font-size:20px; color: gray;">
-                        <?php
-                        $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
-                        $reqData->execute();
-
-                        while ($datacat = $reqData->fetch()) {
-                        ?>
-                            <p><?= $datacat['nom'] ?>V<?= $datacat['id'] ?></p>
-                        <?php
-
-                        }
-                        ?>
+                        <p><?= $resultat['catnom'] ?> V <?= $resultat['catid'] ?></p>
                     </div>
                 </div>
-                <?php
-                $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
-                $reqData->execute();
-
-                while ($datacat = $reqData->fetch()) {
-                ?>
-                    <a style="color: darkgreen;" href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?></a>
-                <?php
-
-                }
-                ?>
+             
+                    <a style="color: darkgreen;" href="categorieproduit.php?id=<?= $resultat['catid'] ?>"> <?= $resultat['catnom'] ?></a>
                 <p style="color: black;"><?= $resultat['titre'] ?></p>
                 <p style="color: rgb(60,71,71 ); font-size:30px;"><?= $resultat['prix'] ?> Fcfa</p>
                 <p style="color:rgb(60, 57, 57);"><?= $resultat['contenu'] ?></p>
@@ -81,7 +54,44 @@ $resultat = $recupData->fetch();
                         <button class="button_js" id="augmenter">+</button>
                         <input class="btn_p" type="submit" value="ADD TO CARD">
                     </div>
-                    <script>
+                    <div class="relie">
+                        <div>
+                            <p>Category:</p>
+                        </div>
+                        <div class="lien">
+                          
+                                <a class="a4p" href="categorieproduit.php?id=<?= $resultat['catid'] ?>"><?= $resultat['catnom'] ?></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3post">
+        <h1 style="margin-left: 300px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
+        <div class="produitsde">
+            <?php
+            $reqData = $bdd->prepare('SELECT * FROM produits');
+            $reqData->execute();
+
+            while ($resultat = $reqData->fetch()) {
+            ?>
+                <div class="produitde">
+                    <a href="detail.php?id=<?= $resultat['id'] ?>"><img src="<?= $resultat['image'] ?>" alt=""></a>
+                    <p><?= $resultat['contenu'] ?></p>
+                    <a href="detail.php?id=<?= $resultat['id'] ?>"><?= $resultat['titre'] ?></a><br>
+                    <br>
+                    
+                    <span><?= $resultat['prix'] ?></span>
+
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+
+    </section>
+    <script>
                         // Récupérer les éléments HTML
                         var valeurElement = document.getElementById('valeur');
                         var augmenterButton = document.getElementById('augmenter');
@@ -109,55 +119,6 @@ $resultat = $recupData->fetch();
                             }
                         });
                     </script>
-                    <div class="relie">
-                        <div>
-                            <p>Category:</p>
-                        </div>
-                        <div class="lien">
-                            <?php
-                            $reqData = $bdd->prepare('SELECT *, count(*) as count FROM categorie JOIN produits ON id_categorie = produits.id_categorie ');
-                            $reqData->execute();
-
-                            while ($datacat = $reqData->fetch()) {
-                            ?>
-                                <a class="a4p" href="categorieproduit.php?id=<?= $datacat['id'] ?>"><?= $datacat['nom'] ?></a>
-                            <?php
-
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section3post">
-        <h1 style="margin-left: 300px; color: black; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Related products</h1>
-        <div class="produitsde">
-            <?php
-            $reqData = $bdd->prepare('SELECT * FROM produits');
-            $reqData->execute();
-
-            while ($resultat = $reqData->fetch()) {
-            ?>
-                <div class="produitde">
-                    <a href="detail.php?id=<?= $resultat['id'] ?>"><img src="<?= $resultat['image'] ?>" alt=""></a>
-                    <p><?= $resultat['contenu'] ?></p>
-                    <a href="detail.php?id=<?= $resultat['id'] ?>"><?= $resultat['titre'] ?></a><br>
-                    <span><?= $resultat['prix'] ?></span>
-
-                </div>
-            <?php
-            }
-            ?>
-        </div>
-
-    </section>
-
+<?php include('includes/footer.php'); ?>
 </body>
-
-<?php
-include('includes/footer.php');
-?>
-
 </html>

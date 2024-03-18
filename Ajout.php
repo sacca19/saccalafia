@@ -14,19 +14,10 @@ ini_set("display_errors", 1);
 
     <title>Document</title>
 </head>
-<header class="shop_header">
-<nav class="navigation_shop">
-    <?php 
-        include ('includes/header.php');
-    ?>
-    </header>
-    </nav>
+<header></header>
 <body>
-   
-    <div class="title">
-    <h1>Ajout articles</h1>
-    </div>
-    <br><br><br>
+<h1 style="text-align: center;padding-top:100px;">Ajout articles</h1>
+    <div class="formauth1">
     <form method="post" action="traitementajout.php" enctype="multipart/form-data">
     <label for="file">Image</label>
     <br>
@@ -60,7 +51,7 @@ ini_set("display_errors", 1);
         }
         ?>
     </select>
-    <br>
+    <br><br><br>
     <div class="btn">
         <input type="submit" value="Publier" name="ok">
     </div>
@@ -68,12 +59,6 @@ ini_set("display_errors", 1);
 
     </div>
     
-   
+    </div>
 </body>
-<footer>
-    <?php 
-        include ('includes/footer.php');
-    ?>
-
-</footer>
 </html>

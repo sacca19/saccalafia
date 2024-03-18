@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if(isset($_SESSION['status'])){
+    // Au moins une des trois sessions existe
+    header('location: index.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,19 +18,11 @@
     <title>Document</title>
 </head>
 
-<header class="Auth_header">
-<nav class="navigation_shop">
-        <?php 
-        include ('includes/header.php');
-    ?>
-    </nav> 
-</header>
+<header></header>
     
 <body>
-    
-<div class="form">
-            <h1>CONNEXION</h1>
-
+<h1 style="text-align: center">CONNEXION</h1>
+<div class="formauth1">
     <form method="post" action="traitementConnexion.php">
             <label for="e_mail">e_mail ou ID</label>
             <br>
@@ -43,9 +43,4 @@
     </form>
 </div>
 </body>
-<footer>
-<?php 
-        include ('includes/header.php');
-    ?>
-</footer>
 </html>

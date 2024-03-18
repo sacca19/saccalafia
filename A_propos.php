@@ -1,7 +1,7 @@
 <?php
-include('includes/auth.php');                         
-                                                    
 session_start();
+include('includes/auth.php');                         
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,33 +12,31 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<p>Bonjour<?php
-                if (!isset($_SESSION['id'])) {
+<p>Bonjour <?php
+                if (!isset($_SESSION['status'])){
                     echo ' vous êtes  hors connexion';
                 } else {
-                    echo $_SESSION['nom'];
-                   echo $_SESSION['id'];
+                    if($_SESSION['status'] == 'styliste'){
+
+                        echo 'Vous êtes styliste et votre nom est : '.$_SESSION['nom'];
+                      }elseif($_SESSION['status'] == 'clients'){
+
+                        echo 'Vous êtes clients et votre nom est : '.$_SESSION['nom'];
+                      }else{
+
+                        echo 'Vous êtes apprenti et votre nom est : '.$_SESSION['nom'];
+                      }
                 } ?>
 
     </p>
 <body>
 <header class="about_header">
    <nav class="navigation">
-   <a  class="logo" href="inscription.php"><strong>CONNEXION </strong></a>  
-    <a class="logo" href="Connexion.php"><strong>DECONNEXION</strong></a>
-     <div class="menu">
-     <a href="index.php">ACCUEIL</a>
-    <a href="Boutiques.php">BOUTIQUES</a>
-    <a href="Contact.php">CONTACT</a>
-    <a href="formation.php">FORMATION</a>
-    <a href="#">
-    <a href="panier.php"><i class="fa-solid fa-bag-shopping" style=" margin-left:-65px;font-size: 25px;margin-top: -5px;"></i></a>
-    </a>
-    <a href="#">
-        <i class="fa-solid fa-user" style="margin-left:-65px;font-size: 25px;margin-top: -5px;"></i>
-    </a>
-
-</div>
+   <a  class="logo" href="Connexion.php"><strong>CONNEXION </strong></a>  
+    <a class="logo" href="Deconnexion.php"><strong>DECONNEXION</strong></a>
+      <?php
+        include('includes/header.php');                         
+      ?>
     </nav>
         <div class="container">
             <h1 class="product-title3">QUI SOMME </h1>
@@ -66,10 +64,9 @@ session_start();
         </div>
      </section>
  <br><br><br>
- 
-</body>
-<footer>
  <?php 
         include ('includes/footer.php');
     ?>
+<footer>
+</body>
 </html>
