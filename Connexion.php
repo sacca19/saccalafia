@@ -6,6 +6,53 @@ if(isset($_SESSION['status'])){
 }
 
 ?>
+
+<?php 
+  session_start();
+   
+  include ('includes/auth.php');
+
+  // tu peux laisser le controle de isset($_post['ok']) ou bien
+  // tu peux enléver
+  
+  if (isset($_POST['ok'])) {
+    // ICI ON RECUPERE LES VALEURS DES CHAMPS DU FORMULAIRE
+      $email = htmlspecialchars($_POST['email']);
+      $password = htmlspecialchars($_POST['passwordd']);
+
+    if(isset( $email, $password) AND !empty($_POST['email'])){
+  
+      // VERIFIONS SI L'email que la personne à renseigner existe déjà dans la base de données
+      $reqData = $bdd->prepare('SELECT *, count(*) as count FROM users WHERE email = ?');
+      $reqData->execute(array($email));
+      $resultat = $reqData->fetch();
+      var_dump($resultat);
+      if ($resultat['count'] > 0) {  
+        
+        $passwordVerrify = password_verify($password,$resultat['passwordd']);
+        if ($passwordVerrify) {
+
+            $_SESSION['status'] = $resultat['status'];
+
+            $_SESSION['nom'] = $resultat['nom'];
+            $_SESSION['id'] = $resultat['id'];
+        
+
+          header('LOCATION: A_propos.php');
+          exit;
+            }else{
+            echo 'Mot de passe  incorrect !';
+          }
+        }else{
+          echo 'Le mail n\'existe pas';
+        }
+      }else {
+       echo 'Veillez remplir tous les champs !';
+      }
+  }
+  
+  
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +70,7 @@ if(isset($_SESSION['status'])){
 <body>
 <h1 style="text-align: center">CONNEXION</h1>
 <div class="formauth1">
-    <form method="post" action="traitementConnexion.php">
+    <form method="post">
             <label for="e_mail">e_mail ou ID</label>
             <br>
             <input type="text" id="email" name="email">

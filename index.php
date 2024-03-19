@@ -65,7 +65,7 @@ ini_set("display_errors", 1);
                             $reqData->execute();
                             $count = 0; 
                             while($resultat = $reqData->fetch()){
-                                if ($count < 3) {
+                                if ($count < 8) {
                                 ?>
                             <div class="commentaire">
                             <img class="cotes" src="assets/img/Côte.png" alt="Description de l'image">
@@ -81,6 +81,18 @@ ini_set("display_errors", 1);
                     }
                     ?>
     </div>  
+<form action="">
+    <div>
+    <a href="formcommentaire.php"></a>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+</form>
     </section>
     <section class="section3">
         <div class="section3_div">
