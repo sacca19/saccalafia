@@ -67,11 +67,21 @@ ini_set("display_errors", 1);
                             while($resultat = $reqData->fetch()){
                                 if ($count < 8) {
                                 ?>
-                            <div class="commentaire">
-                            <img class="cotes" src="assets/img/Côte.png" alt="Description de l'image">
-                            <p><?= $resultat['commentaire']?></p><br>
-                            <a href="index.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
-                            <p style="font-size:14px;"><strong><?= $resultat['nom']?></strong></p>
+                            <div class="commentaire" style="border: 1px solid black; padding: 1% 1% 1% 1%;">
+                                <img class="cotes" src="assets/img/Côte.png" alt="Description de l'image">
+                                <p><?= $resultat['commentaire']?></p><br>
+                                <a href="index.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
+                                <p style="font-size:14px;"><strong><?= $resultat['nom']?></strong></p>
+                                
+                                <div class="" style="display:flex; gap:60px;margin-top:5%;">
+                                    <div class="avis2">
+                                        <a href="updatecommentaire.php?<?= $resultat['id']?>">Modifier</a>
+                                    </div>
+                                    <div class="avis3">
+                                        <a href="commentaire.php?<?= $resultat['id']?>">Supprimer</a>
+                                    </div>
+                                </div>
+
                             </div>                        
                         <?php
                          $count++;
@@ -80,19 +90,14 @@ ini_set("display_errors", 1);
                         }
                     }
                     ?>
-    </div>  
-<form action="">
-    <div>
-    <a href="formcommentaire.php"></a>
+        </div>
 
-    </div>
-    <div>
+    
+            <div class="avis1">
+                <a href="commentaire.php">Ajouter un Commentaire</a>
+            </div>
+    
 
-    </div>
-    <div>
-
-    </div>
-</form>
     </section>
     <section class="section3">
         <div class="section3_div">

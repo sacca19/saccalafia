@@ -26,7 +26,6 @@ if(isset($_SESSION['status'])){
       $reqData = $bdd->prepare('SELECT *, count(*) as count FROM users WHERE email = ?');
       $reqData->execute(array($email));
       $resultat = $reqData->fetch();
-      var_dump($resultat);
       if ($resultat['count'] > 0) {  
         
         $passwordVerrify = password_verify($password,$resultat['passwordd']);

@@ -1,33 +1,16 @@
-<?php 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
- include ('includes/auth.php');
-?>
-
 <?php
-// Activer le rapport d'erreurs pour afficher toutes les erreurs
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
- 
-// Inclure le fichier d'authentification
-include ('includes/auth.php');
+    session_start();
+    include('includes/auth.php');
 
-// Fermeture de la connexion à la base de données*/
+  if(!isset($_SESSION['status'])){ 
+    header('location: Connexion.php');
+  }
+
 if (isset($_POST['ok'])) {
-	$commentaire = htmlspecialchars($_POST['commentaire']);
+    $id= $_SESSION['id'];
+    $commentaire = htmlspecialchars($_POST['commentaire']);
 	$nom = htmlspecialchars($_POST['nom']);
 	
-  
-	if (!empty($commentaire) && !empty($nom)) {
-  
-	  // VERIFIONS SI L'ARTICLE EXISTE DEJA
-	  $reqSelect = $bdd->prepare('SELECT count(*) as count FROM avis WHERE nom = ?');
-	  $reqSelect->execute(array($nom));
-	  $resultat = $reqSelect->fetch();
-  
-	  if ($resultat['count'] > 0) {
-		echo "Le commentaire entrer existe déjà.";
-	  } else {
 		if (isset($_FILES['image']) and $_FILES['image']['error'] == 0) {
 		  // verifion la taille du fichier à 2mo
 		  if ($_FILES['image']['size'] <= 2000000) {
@@ -39,11 +22,10 @@ if (isset($_POST['ok'])) {
 			  // on ajoute le ficher dans le dossier 
 			  move_uploaded_file($_FILES['image']['tmp_name'], 'upload/' . basename($_FILES['image']['name']));
 			  $filename = 'upload/' . basename($_FILES['image']['name']);
-  
-			  $sql = "INSERT INTO avis(commentaire,image,nom,date_publication) VALUES (?,?,?,now())";
-			  $req = $bdd->prepare($sql);
-			  $req->execute(array($commentaire,$filename,$nom ));
-			  echo ' Commentaire publié !';
+
+				$reqData = $bdd->prepare("UPDATE avis SET commentaire=?,image=? nom=? where id = ?");
+				$reqData->execute(array($commentaire,$image,$nom,$id));
+			  echo ' Commentaire modifier !';
 			} else {
 			  echo 'Le ficher n\'est pas de type image : jpg, jpeg et png.';
 			}
@@ -55,14 +37,11 @@ if (isset($_POST['ok'])) {
 		}
 	  }
   
-	} else {
+	 else {
 	  echo "Remplissez tout les champs.";
 	}
-  }
   
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,35 +65,41 @@ if (isset($_POST['ok'])) {
 <body>
     
     <div class="title">
-		<h1>Ajout de commentaire</h1>
+		<h1>Modifier mon commentaire</h1>
 		</div>
-		<br><br><br>
-		<form method="post" enctype="multipart/form-data">
+		<?php
+        
+        $reqData = $bdd->prepare("SELECT * FROM avis where id = ?");
+        $reqData->execute(array($_SESSION['id']));
+
+        while ($resultat = $reqData->fetch()) {
+        ?>
+             <form method="post" enctype="multipart/form-data">
 			<label for="file">Image</label>
 			<br>
-			<input type="file" name="image">
+			<input type="file" name="image" value="<img src="<?= $resultat['image'] ?> alt="">">
 			<br>
 			<label for="commentaire">commentaire</label>
 			<br>
-			<input type="text" id="commentaire" name="commentaire">
+			<input type="text" id="commentaire" name="commentaire" value="<?= $resultat['commentaire']?>">
 			<br>
 			<label for="nom">nom</label>
 			<br>
-			<input type="nom" id="nom" name="nom">
+			<input type="nom" id="nom" name="nom" value="<?= $resultat['nom']?>">
 			<br>
 			<div class="btn">
-				<input type="submit" value="Poster" name="ok">
+				<input type="submit" value="Modifier" name="ok">
 			</div>
 		</form>
-
-    </div>
-    
-<footer>
-    <?php 
-        include ('includes/footer.php');
+            <?php
+        }
+?>
+            </div>
+    </section>
+    <footer>
+    <?php
+    include('includes/footer.php');
     ?>
 </footer>
-   
 </body>
-
 </html>
