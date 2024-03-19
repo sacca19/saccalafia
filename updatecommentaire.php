@@ -1,7 +1,7 @@
 <?php
     session_start();
     include('includes/auth.php');
-
+	
   if(!isset($_SESSION['status'])){ 
     header('location: Connexion.php');
   }
@@ -23,8 +23,9 @@ if (isset($_POST['ok'])) {
 			  move_uploaded_file($_FILES['image']['tmp_name'], 'upload/' . basename($_FILES['image']['name']));
 			  $filename = 'upload/' . basename($_FILES['image']['name']);
 
-				$reqData = $bdd->prepare("UPDATE avis SET commentaire=?,image=? nom=? where id = ?");
-				$reqData->execute(array($commentaire,$image,$nom,$id));
+			  $reqData = $bdd->prepare("UPDATE avis SET commentaire=?, image=?, nom=? WHERE id = ?");
+			  $reqData->execute(array($commentaire, $filename, $nom, $id));
+			  
 			  echo ' Commentaire modifier !';
 			} else {
 			  echo 'Le ficher n\'est pas de type image : jpg, jpeg et png.';
@@ -42,6 +43,7 @@ if (isset($_POST['ok'])) {
 	}
   
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,23 +63,22 @@ if (isset($_POST['ok'])) {
     </nav> 
 </header>
 <body>
-  
-<body>
     
     <div class="title">
 		<h1>Modifier mon commentaire</h1>
 		</div>
 		<?php
-        
-        $reqData = $bdd->prepare("SELECT * FROM avis where id = ?");
-        $reqData->execute(array($_SESSION['id']));
 
+		$id=3;
+        
+        $reqData = $bdd->prepare('SELECT * FROM avis where id=?');
+        $reqData->execute(array($id));
         while ($resultat = $reqData->fetch()) {
-        ?>
+			?>
              <form method="post" enctype="multipart/form-data">
 			<label for="file">Image</label>
 			<br>
-			<input type="file" name="image" value="<img src="<?= $resultat['image'] ?> alt="">">
+			<input type="file" name="image" value="<img src="<?= $resultat['image'] ?> alt="Image">
 			<br>
 			<label for="commentaire">commentaire</label>
 			<br>
@@ -85,7 +86,7 @@ if (isset($_POST['ok'])) {
 			<br>
 			<label for="nom">nom</label>
 			<br>
-			<input type="nom" id="nom" name="nom" value="<?= $resultat['nom']?>">
+			<input type="text" id="nom" name="nom" value="<?= $resultat['nom']?>">
 			<br>
 			<div class="btn">
 				<input type="submit" value="Modifier" name="ok">
@@ -100,6 +101,6 @@ if (isset($_POST['ok'])) {
     <?php
     include('includes/footer.php');
     ?>
-</footer>
+	</footer>
 </body>
 </html>
