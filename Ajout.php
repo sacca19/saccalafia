@@ -14,7 +14,7 @@ include ('includes/auth.php');
 // Fermeture de la connexion à la base de données*/
 if (isset($_POST['ok'])) {
 	$titre = htmlspecialchars($_POST['titre']);
-	$contenu = htmlspecialchars($_POST['contenu']);
+	$contenu = htmlspecialchars($_POST['contenu']); 
 	$prix = htmlspecialchars($_POST['prix']);
 	$id_categorie = htmlspecialchars($_POST['id_categorie']);
   

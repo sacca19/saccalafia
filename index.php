@@ -3,7 +3,15 @@ include('includes/auth.php');
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-
+if(isset($_GET['id']) && !empty($_GET['id'])){
+    $id = $_GET['id'];
+    $sql="DELETE FROM avis where id=?";
+    $req= $bdd->prepare($sql);
+    if($req->execute(array($id)))echo "<h2 style='background-color: red;'>Votre commentaire à bien été supprimer avec succès !</h2>";
+    else{
+        echo "<h2 style='background-color: red;'>Votre commentaire n'a pas encore été supprimer !</h2>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +86,7 @@ ini_set("display_errors", 1);
                                         <a href="updatecommentaire.php?id=<?= $resultat['id']?>">Modifier</a>
                                     </div>
                                     <div class="avis3">
-                                        <a href="commentaire.php?id=<?= $resultat['id']?>">Supprimer</a>
+                                        <a href="index.php?id=<?= $resultat['id']?>">Supprimer</a>
                                     </div>
                                 </div>
 
