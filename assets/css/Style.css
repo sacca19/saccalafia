@@ -935,4 +935,50 @@ align-items: center;
 .title_com{
     margin-top: 50px;
 }
+.menu_dashbord{
+    font-size: 20px;
+    margin-left: -400px;
+    background-color: rgb(171, 243, 243);
+    border: solid 1px rgb(184, 221, 221);
+    padding-top: 10px;
+    }
+    .menu_dashbord a{
+        text-decoration: none;
+        color:black;
+        width: 800px;
+        height: 30px;
+        margin: 20px;
+        
+    }
+    .menu_dashbord a:hover{
+        color:rgb(5, 69, 5);
+    }
+    .logo2{
+        text-decoration: none;
+        color:rgb(8, 8, 8);
+        font-size: 25px;
+        padding-top: 50px; 
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       
+    }
+    .group_dasbord{
+        border-left: solid 10px gray;
+         padding:9px
+    }
+    .avis4{
+        padding-bottom: 60px;
+    
+    }
+    .searchs2{
+        display: flex;
+        text-align: left;
+        color: black;
+        margin: 40px 50px;
+        padding: 10px;
+        gap: 50px;
+        justify-content: center;
+        margin-left: 500px;
+    
+    }
+
 /*fin du style*/
