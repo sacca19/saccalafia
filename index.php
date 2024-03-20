@@ -75,10 +75,10 @@ ini_set("display_errors", 1);
                                 
                                 <div class="" style="display:flex; gap:60px;margin-top:5%;">
                                     <div class="avis2">
-                                        <a href="updatecommentaire.php?<?= $resultat['id']?>">Modifier</a>
+                                        <a href="updatecommentaire.php?id=<?= $resultat['id']?>">Modifier</a>
                                     </div>
                                     <div class="avis3">
-                                        <a href="commentaire.php?<?= $resultat['id']?>">Supprimer</a>
+                                        <a href="commentaire.php?id=<?= $resultat['id']?>">Supprimer</a>
                                     </div>
                                 </div>
 

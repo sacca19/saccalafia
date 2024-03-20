@@ -930,4 +930,9 @@ align-items: center;
     padding: 10px 0px;
     border-top: 1px solid #333;
 }
+
+/*style pour la page update commentaire juste un margin top*/
+.title_com{
+    margin-top: 50px;
+}
 /*fin du style*/
