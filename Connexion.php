@@ -35,9 +35,15 @@ if(isset($_SESSION['status'])){
 
             $_SESSION['nom'] = $resultat['nom'];
             $_SESSION['id'] = $resultat['id'];
-        
 
-          header('LOCATION: A_propos.php');
+
+          if($result['status']==1){
+            header('LOCATION: Dashbord.php');
+          }else{
+            if($resultat['status']==2){
+              header('LOCATION: A_propos.php');
+            }
+          }
           exit;
             }else{
             echo 'Mot de passe  incorrect !';

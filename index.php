@@ -31,8 +31,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     <a  href="inscription.php">INSCRIPTION</a>
     <a href="Connexion.php">CONNEXION</a>
     <a href="formation.php">FORMATION</a>
-</div>
-
+    </div>
     </nav>
     <div class="container">
         <h1 class="product-title1">MAGASIN </h1>

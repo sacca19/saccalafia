@@ -19,10 +19,12 @@ if (isset($_POST['ok'])) {
     $phonenumber = htmlspecialchars($_POST['phonenumber']);
     $email = htmlspecialchars($_POST['email']);
 	  $password = htmlspecialchars($_POST['passwordd']);
+    $ville = htmlspecialchars($_POST['ville']);
+    $quartier = htmlspecialchars($_POST['quartier']);
     $type = htmlspecialchars($_POST['status']);
  
 
-  if(isset($nom, $prenom, $pseudo, $phonenumber, $email, $password,$type) AND !empty($_POST['nom'])){
+  if(isset($nom, $prenom, $pseudo, $phonenumber, $email, $password,$ville,$quartier,$type) AND !empty($_POST['nom'])){
 
     // VERIFIONS SI L'email que la personne à renseigner existe déjà dans la base de données
     $passwordHash = password_hash($password,PASSWORD_DEFAULT);
@@ -39,8 +41,8 @@ if (isset($_POST['ok'])) {
 
         if (strlen($password) >= 8) {
                 // si c'est bon, on insert les informations du formulaire dans la base de données
-                $req = $bdd->prepare("INSERT INTO users(nom, prenom, pseudo, email, phonenumber, passwordd,status) VALUES (?,?,?,?,?,?,?)");
-                $req->execute(array($nom, $prenom,$pseudo,$email,$phonenumber,$passwordHash,$type));
+                $req = $bdd->prepare("INSERT INTO users(nom, prenom, pseudo, email, phonenumber, passwordd,ville,quartier,status) VALUES (?,?,?,?,?,?,?,?,?)");
+                $req->execute(array($nom, $prenom,$pseudo,$email,$phonenumber,$passwordHash,$ville,$quartier,$type));
                 
                 echo 'Inscription réussie';
           }else{
