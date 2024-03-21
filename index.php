@@ -79,15 +79,6 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                                 <p><?= $resultat['commentaire']?></p><br>
                                 <a href="index.php?id=<?= $resultat['id']?>"><img src="<?= $resultat['image']?>" alt=""></a> 
                                 <p style="font-size:14px;"><strong><?= $resultat['nom']?></strong></p>
-                                
-                                <div class="" style="display:flex; gap:60px;margin-top:5%;">
-                                    <div class="avis2">
-                                        <a href="updatecommentaire.php?id=<?= $resultat['id']?>">Modifier</a>
-                                    </div>
-                                    <div class="avis3">
-                                        <a href="index.php?id=<?= $resultat['id']?>">Supprimer</a>
-                                    </div>
-                                </div>
 
                             </div>                        
                         <?php
@@ -101,7 +92,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 
     
             <div class="avis1">
-                <a href="commentaire.php">Ajouter un Commentaire</a>
+                <a href="commentaire.php">voir plus</a>
             </div>
     
 

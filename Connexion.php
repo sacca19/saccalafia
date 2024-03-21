@@ -1,16 +1,12 @@
 <?php 
 session_start();
+ include ('includes/auth.php');
 if(isset($_SESSION['status'])){
     // Au moins une des trois sessions existe
     header('location: index.php');
 }
-
-?>
-
-<?php 
-  session_start();
    
-  include ('includes/auth.php');
+ 
 
   // tu peux laisser le controle de isset($_post['ok']) ou bien
   // tu peux enléver
@@ -35,16 +31,16 @@ if(isset($_SESSION['status'])){
 
             $_SESSION['nom'] = $resultat['nom'];
             $_SESSION['id'] = $resultat['id'];
-
-
-          if($result['status']==1){
-            header('LOCATION: Dashbord.php');
-          }else{
-            if($resultat['status']==2){
-              header('LOCATION: A_propos.php');
+           
+            if ($_SESSION['status'] == 'styliste') {
+              header('location: Dashbord.php');
+            }elseif($_SESSION['status'] == 'clients') {
+               header('location: Dashbordclients.php');
+            }else{
+               header('location: Dashbordclients.php');
             }
-          }
-          exit;
+
+         
             }else{
             echo 'Mot de passe  incorrect !';
           }

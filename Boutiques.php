@@ -16,6 +16,7 @@ include('includes/auth.php');
 <body>
 <header class="shop_header">
     <nav class="navigation_shop">
+    <a class="logo2" href="index.php">Ofashion</a> 
         <?php
         include('includes/header.php');
         ?>

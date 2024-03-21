@@ -10,8 +10,8 @@
                 <a href="Formation.php">FORMATION</a> 
                 </div>
                 <div>
-               <a class="logo" href=""> Copyright © 2024 Ofashion magasin</a>
-                    <a  class="logo" href="Deconnexion.php"><strong>Deconnexion </strong></a>  
+               <a class="logo2" href=""> Copyright © 2024 Ofashion magasin</a>
+                    <a  class="logo2" href="Deconnexion.php"><strong>Deconnexion </strong></a>  
                 </div>
         </nav>
         </div>

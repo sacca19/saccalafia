@@ -1,22 +1,26 @@
-<?php include('includes/auth.php'); 
+<?php 
+session_start();
+include('includes/auth.php'); 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-?>
-<?php
+if(!isset($_SESSION['status'])){ 
+    header('location: Connexion.php');
+}
 
-    $id= $_POST['id'];
+    $id= $_GET['id'];
+    if (isset($_POST['update'])) { 
 	$titre = htmlspecialchars($_POST['titre']);
 	$contenu = htmlspecialchars($_POST['contenu']);
 	$prix = htmlspecialchars($_POST['prix']);
 	$id_categorie = htmlspecialchars($_POST['id_categorie']);
 
-if (isset($titre, $contenu,$prix,$id_categorie)) {
-
-    if ($_FILES['image']['size'] <= 2000000) {
-        $fileinfo = pathinfo($_FILES['image']['name']);
-        $extension = $fileinfo['extension'];
-        $extension_autorisees = array('jpg', 'jpeg', 'png');
-        if (in_array($extension, $extension_autorisees)) {
+        if (isset($titre, $contenu,$prix,$id_categorie)) {
+            if (isset($_FILES['image']) and $_FILES['image']['error'] == 0) {
+            if ($_FILES['image']['size'] <= 2000000) {
+                $fileinfo = pathinfo($_FILES['image']['name']);
+                $extension = $fileinfo['extension'];
+                $extension_autorisees = array('jpg', 'jpeg', 'png');
+                if (in_array($extension, $extension_autorisees)) {
 
             // on ajoute le ficher dans le dossier 
             move_uploaded_file($_FILES['image']['tmp_name'], 'upload/' . basename($_FILES['image']['name']));
@@ -30,10 +34,11 @@ if (isset($titre, $contenu,$prix,$id_categorie)) {
     } else {
         echo 'L\'image ne doit pas dépasser 2Mo.';
     }
-} else {
-    echo 'Impossible de modifier le fichier.';
 }
-
+} else {
+    echo 'Remplissez tout les champs';
+}
+}
 ?>
 
 <!DOCTYPE html>
@@ -60,11 +65,11 @@ if (isset($titre, $contenu,$prix,$id_categorie)) {
     
         while ($resultat = $reqData->fetch()) {
         ?>
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 
                 <label for="file">Image</label>
                 <br>
-                <input type="file" name="image" value="<?= $resultat['image'] ?>">
+                <input type="file" name="image" value="uplaod/ok.png" >
                 <br>
                 <label for="titre">Titre</label>
                 <br>
@@ -94,6 +99,10 @@ if (isset($titre, $contenu,$prix,$id_categorie)) {
                     }
                     ?>
                 </select>
+                <br><br>
+                <div class="btn">
+        <input type="submit" value="Modifier" name="update">
+    </div>
             </form>
         <?php
         }

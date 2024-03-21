@@ -31,8 +31,7 @@ include('includes/auth.php');
     </p>
 <body>
 <header class="about_header">
-   <nav class="navigation">
-   <a  class="logo" href="Connexion.php"><strong>CONNEXION </strong></a>  
+   <nav class="navigation">  
     <a class="logo" href="Deconnexion.php"><strong>DECONNEXION</strong></a>
       <?php
         include('includes/header.php');                         

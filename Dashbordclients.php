@@ -4,17 +4,6 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 include('includes/auth.php');
 
-if (isset($_SESSION['status'])) {
-    if ($_SESSION['status'] == 'styliste') {
-        header('location: Dashbord.php');
-      }elseif($_SESSION['status'] == 'clients') {
-         header('location: Dashbordclients.php');
-      }else{
-         header('location: Dashbordclients.php');
-      }
-}else{
-    header('location:Connexion.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,10 +38,16 @@ if (isset($_SESSION['status'])) {
                     <a href="modificationusers.php">modifier mes informations</a><br>
                 </div>
                 <div class="avis4">
-                    <a href="liste.php">Aticles publiés</a><br>
+                    <a href="Boutiques.php">Aticles disponible</a><br>
                 </div>
                 <div class="avis4">
-                    <a href="Ajout.php">Ajouter des articles</a><br>
+                    <a href="panier.php">Mon panier</a><br>
+                </div>
+                <div class="avis4">
+                    <a href="paiement.php">Mes paiements</a><br>
+                </div>
+                <div class="avis4">
+                    <a href="paiement.php">Lancer une commande</a><br>
                 </div>
                 <div class="avis4">
                     <a href="commentaire.php">Ajouter un commentaire</a><br>

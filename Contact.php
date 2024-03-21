@@ -9,7 +9,8 @@
 </head>
 <body>
 <header class="contact_header">
-<nav class="navigation"><a  class="logo" href="inscription.php"><strong>CONNEXION </strong></a>  
+<nav class="navigation">
+    <a  class="logo" href="inscription.php"><strong>CONNEXION </strong></a>  
     <a class="logo" href="Connexion.php"><strong>DECONNEXION</strong></a>
     <?php
         include('includes/header.php');                         
