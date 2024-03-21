@@ -78,45 +78,35 @@ if (isset($_SESSION['status'])) {
                     while ($resultat = $reqData->fetch()) {
                     ?>
                         <div>
-                           <div style="display: flex; gap:15px;">
+                        <div  class="div_class1">
+                            <div style="display: flex; gap:5px; margin-left:50px; font-size:20px;">
                                 <div>
-                                    <label type="nom">nom*</label>
-                                    <br>
-                                    <input style="height: 70px; width: 450px;" type="text" name="nom" value="<?= $resultat['nom'] ?>">
-                                </div>
-                                <div>
-                                    <label for="prenom">Prénom*</label>
-                                    <br>
-                                    <input style="height: 70px; width: 450px;" type="text" name="prenom" value="<?= $resultat['prenom'] ?>">
-                                </div>
-                            </div>
-                            <div>
-                                <label for="e_mail">Pseudo*</label>
-                                <br>
-                                <input style="height: 70px; width: 920px;" type="tel" id="pseudo" name="pseudo" value="<?= $resultat['pseudo'] ?>">
-                            </div>
-                            <div>
-                                <label for="e_mail">Phonenumber*</label>
-                                <br>
-                                <input style="height: 70px; width: 920px;" type="tel" id="phonenumber" name="phonenumber" value="<?= $resultat['phonenumber'] ?>">
-                            </div>
-                            <div>
-                                <label for="e_mail">e_mail*</label>
-                                <br>
-                                <input style="height: 70px; width: 920px;" type="email" id="email" name="email" value="<?= $resultat['email'] ?>">
-                            </div>
-                            <div>
-                                <label for="ville">Ville*</label>
-                                <br>
-                                <input style="height: 70px; width: 920px;" type="text" id="ville" name="ville" value="<?= $resultat['ville'] ?>">
-                            </div>
-                            <div>
-                                <label for="quartier">Quartier*</label>
-                                <br>
-                                <input style="height: 70px; width: 920px;" type="text" id="quartier" name="quartier" value="<?= $resultat['quartier'] ?>">
-                            </div>
-                        </div>
 
+                                    <p style="font-weight: bolder;">nom*</p>
+                                    <p><?= $resultat['nom'] ?></p>
+                                    <br>
+                                    <p style="font-weight: bolder;">Prénom*</p>
+                                    <p><?= $resultat['prenom'] ?></p>
+                                    <br>
+                                    <p style="font-weight: bolder;">Pseudo*</p>
+                                    <p><?= $resultat['pseudo'] ?></p>
+                                    <br>
+                                    <p style="font-weight: bolder;">Phonenumber*</p>
+                                    <p><?= $resultat['phonenumber'] ?>"</p>
+                                    <br>
+                                    <p style="font-weight: bolder;">e_mail*</p>
+                                    <p><?= $resultat['email'] ?>"</p>
+                                </div>
+                                <div style="margin-left: 200px;">
+                                <p style="font-weight: bolder;">Ville*</p>
+                                <p><?= $resultat['ville'] ?></p>
+                                <br>
+                                <p style="font-weight: bolder;">Quartier*</p>
+                                <p><?= $resultat['quartier'] ?></p>
+                                </div>
+                            </div>                      
+                                
+                        </div>
                     <?php
                     }
                     ?>

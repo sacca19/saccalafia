@@ -106,7 +106,7 @@ if (isset($_POST['ok'])) {
         ?>
     </select>
     <br><br><br>
-   c <div class="btn">
+   <div class="btn">
         <input type="submit" value="Publier" name="ok">
     </div>
 </form>

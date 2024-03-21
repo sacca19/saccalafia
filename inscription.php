@@ -117,6 +117,8 @@ if (isset($_POST['ok'])) {
         }
         ?>
     </select>
+    <br>
+    <br>
         <div class="btn6">
             <input style="background-color:green; color:white;border-radius:9px " type="submit" value="M'inscrire" name="ok">
         </div>

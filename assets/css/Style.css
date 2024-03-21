@@ -971,14 +971,14 @@ align-items: center;
     
     }
     .info{
-     margin-left: 50px;
      background-image: url(../img/img14.jpg);
     background-repeat: no-repeat;
     background-position: center, center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 50px;
+    
 
     }
     .entete1{
@@ -987,6 +987,7 @@ align-items: center;
         width: 1000px;  
         padding-top: 9px;
         padding-bottom: 5px;
+        
     }
 
 /*fin du style*/

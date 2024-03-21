@@ -92,7 +92,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 
     
             <div class="avis1">
-                <a href="commentaire.php">voir plus</a>
+                <a href="avis.php">voir plus</a>
             </div>
     
 
